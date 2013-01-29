@@ -8,11 +8,9 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 # local development uses local postgres db
-DATABASE_URL = 'postgres://localhost/letsplay_project'
+DATABASE_URL = 'postgres:///letsplay2'
 
-DATABASES = {
-        'default': dj_database_url.config(default=DATABASE_URL)
-}
+DATABASES = {'default': {'ENGINE': 'django.db.backends.postgresql_psycopg2', 'NAME': 'letsplay2'}}
 
 # not really import for local development
 SECRET_KEY = os.environ.get('SECRET_KEY', 'Not that secret')
