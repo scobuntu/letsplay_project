@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>{% block title %}{% endblock %}</title>
     {% block css %}
+    <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
     {% compress css %}
     {% endcompress %}
     {% endblock %}
