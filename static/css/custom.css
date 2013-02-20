@@ -1,0 +1,35 @@
+html {
+	background: url(../img/forest.jpg) no-repeat center top;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.modal-body h2 {
+	text-align: center;
+}
+
+#form-left {
+	margin: 0 0 0 30px;
+}
+
+#form-left label {
+	display: none;
+}
+
+#form-spacing-left {
+	margin: 0 10px 0 50px;
+}
+
+#form-spacing-right{
+	margin: 40px 0 0 30px;
+}
+
+form label {
+	width: 60px;
+}
+
+.modal-header-top {
+	text-align: center;
+}

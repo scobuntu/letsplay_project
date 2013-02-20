@@ -1,0 +1,51 @@
+{#% load compress staticfiles %#}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    {% block css %}
+    <link href="{{ STATIC_URL }}css/custom.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
+    {#% compress css %#}
+    {#% endcompress %#}
+    {% endblock %}
+</head>
+
+<body id="defaultBg">
+<div class="navbar navbar-static-top">
+  <div class="navbar-inner">
+    <a class="brand" href="#">Let's Play</a>
+    <ul class="nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </div>
+</div>
+    <div class='container'>
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    {% block js %}
+    {#% compress js %#}
+    {#% endcompress %#}
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap.js"></script>
+<script>
+$(document).ready(function(){
+
+    setTimeout(function(){
+        $('#welcomeModal').modal('show');
+        $('#welcomeModal').fadeIn();
+    }, 700);
+});
+</script>
+<style>
+.modal-backdrop, .modal-backdrop.fade.in {
+    opacity: 0.3;
+}
+</style>
+    {% endblock %}
+</body>
+</html>

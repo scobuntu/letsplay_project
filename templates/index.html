@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block content %}
+  	  <div id="welcomeModal" class="modal hide fade" data-backdrop="static">
+  		  <div class="modal-header">
+  			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+  			<h4>Welcome</h4>
+  		  </div>
+  		  <!-- / modal-header -->
+  		  <div class="modal-body">
+          <h2>Welcome to Let's Play!</h2>
+  			  <h3 class="modal-header-top">Customize your content</h3>
+          <form method="POST" action=".">
+            <div class="well">
+              <div class="row">
+              <div class="span3" id="form-left">
+                <h4>Tell us about your child:</h4>
+                  <label for="name">Name</label>
+                  <input id="name" type="text" value="Name:" />
+                  <div class="age-select">
+                    <label for="age-group">Age Group</label>
+                    <select id="age-group">
+                      <option>Age Group</option>
+                      <option>0-4</option>
+                      <option>5-9</option>
+                      <option>10-12</option>
+                    </select> 
+                  </div>
+                  <div class="gender-select">
+                    <label for="gender">Gender</label>
+                    <select id="gender">
+                      <option>Gender</option>
+                      <option>Male</option>
+                      <option>Female</option>
+                    </select>
+                  </div>
+              </div>
+              <div class="span1" id="form-spacing-left">
+                <h4>Interests</h4>
+                <label for="drawing" class="checkbox pull-left">
+                  <input type="checkbox" id="drawing" value="drawing">
+                    Drawing
+                </label>
+                <label for="colouring" class="checkbox pull-left">
+                  <input type="checkbox" id="colouring" value="colouring">
+                    Colouring
+                </label>
+                <label for="music" class="checkbox pull-left">
+                  <input type="checkbox" id="music" value="music">
+                    Music
+                </label>
+                <label for="reading" class="checkbox pull-left">
+                  <input type="checkbox" id="reading" value="reading">
+                    Reading
+                </label>
+                <label for="dolls" class="checkbox pull-left">
+                  <input type="checkbox" id="dolls" value="dolls">
+                    Dolls
+                </label>
+              </div>
+              <!-- / span1 -->
+              <div class="span1" id="form-spacing-right">
+                <label for="cars" class="checkbox pull-left">
+                  <input type="checkbox" id="cars" value="cars">
+                    Cars
+                </label>
+                <label for="animals" class="checkbox pull-left">
+                  <input type="checkbox" id="animals" value="animals">
+                    Animals
+                </label>
+                <label for="pirates" class="checkbox pull-left">
+                  <input type="checkbox" id="pirates" value="pirates">
+                    Pirates
+                </label>
+                <label for="dinosaurs" class="checkbox pull-left">
+                  <input type="checkbox" id="dinosaurs" value="dinosaurs">
+                    Dinosaurs
+                </label>
+                <label for="dress-up" class="checkbox pull-left">
+                  <input type="checkbox" id="dress-up" value="dress-up">
+                    Dress Up
+                </label>
+              </div>
+          </div>
+        </div>
+        </form>
+        </div>
+  		  <div class="modal-footer">
+  			  <a href="#" class="btn btn-primary">Play</a>
+  		  </div>
+      </div>
+
+{% endblock %}
