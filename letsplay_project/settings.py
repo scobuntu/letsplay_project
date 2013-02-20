@@ -98,7 +98,7 @@ ROOT_URLCONF = 'letsplay_project.urls'
 WSGI_APPLICATION = 'letsplay_project.wsgi.application'
 
 TEMPLATE_DIRS = (
-    project_path('templates'),
+    project_path('letsplay_project/templates'),
 )
 
 INSTALLED_APPS = (
