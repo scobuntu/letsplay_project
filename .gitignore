@@ -1,7 +1,0 @@
-# python artifacts
-*.pyc
-*.*~
-
-# django collected static files
-public/
-
