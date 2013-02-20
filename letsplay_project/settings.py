@@ -6,6 +6,13 @@ ROOT = os.path.dirname(CODE_ROOT)
 
 def project_path(*path_segments):
     return os.path.join(ROOT, *path_segments)
+	
+
+DEBUG = True
+TEMPLATE_DEBUG = DEBUG
+
+DATABASES = {'default': {'ENGINE': 'django.db.backends.sqlite3', 'NAME': 'letsplay'}}
+
 
 
 ADMINS = (
