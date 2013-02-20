@@ -5,5 +5,3 @@ from django.template import RequestContext
 def index(request):
 	return render_to_response('index.html', RequestContext(request))
 	
-
-def selection(request):
