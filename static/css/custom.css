@@ -1,13 +1,12 @@
 html {
+}
+
+#main {
 	background: url(../img/forest.jpg) no-repeat center top;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-}
-
-body {
-	background: none;
 }
 
 .container {
@@ -49,9 +48,10 @@ form label {
 }
 
 #create-btn {
-	margin: 11px 0 0 190px;
+	margin: 10px 130px 0 0;
 	font-size: 25px;
 	padding: 10px;
+	float: right;
 }
 
 
