@@ -17,15 +17,13 @@
   <div class="navbar-inner">
     <a class="brand" href="#">Let's Play</a>
     <ul class="nav">
-      <li class="active"><a href="#">Home</a></li>
+      <li class="active"><a href="{% url index %}">Home</a></li>
       <li><a href="#">About</a></li>
     </ul>
   </div>
 </div>
-    <div class='container'>
         {% block content %}
         {% endblock %}
-    </div>
 
     {% block js %}
     {#% compress js %#}
