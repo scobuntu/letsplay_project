@@ -4,7 +4,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-	url(r'^$', include('letsplay.urls')),
+	url(r'', include('letsplay.urls')),
 )
 
 urlpatterns += patterns('',

@@ -6,6 +6,16 @@ html {
 	background-size: cover;
 }
 
+body {
+	background: none;
+}
+
+.container {
+	padding: 20px;
+	background: #FFFFFF;
+	margin-top: 20px;
+}
+
 .modal-body h2 {
 	text-align: center;
 }
@@ -33,3 +43,15 @@ form label {
 .modal-header-top {
 	text-align: center;
 }
+
+#customise-title {
+	float: left;
+}
+
+#create-btn {
+	margin: 11px 0 0 190px;
+	font-size: 25px;
+	padding: 10px;
+}
+
+

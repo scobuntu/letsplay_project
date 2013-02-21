@@ -10,13 +10,14 @@
   		  <div class="modal-body">
           <h2>Welcome to Let's Play!</h2>
   			  <h3 class="modal-header-top">Customize your content</h3>
-          <form method="POST" action=".">
+          <form method="POST" action="/customise/">
+            {% csrf_token %}
             <div class="well">
               <div class="row">
               <div class="span3" id="form-left">
                 <h4>Tell us about your child:</h4>
                   <label for="name">Name</label>
-                  <input id="name" type="text" value="Name:" />
+                  <input id="name" name="name" type="text" value="Name:" />
                   <div class="age-select">
                     <label for="age-group">Age Group</label>
                     <select id="age-group">
@@ -80,13 +81,13 @@
                   <input type="checkbox" id="dress-up" value="dress-up">
                     Dress Up
                 </label>
+                <input type="submit" class="btn btn-primary" value="Play">
               </div>
           </div>
         </div>
         </form>
         </div>
   		  <div class="modal-footer">
-  			  <a href="#" class="btn btn-primary">Play</a>
   		  </div>
       </div>
 

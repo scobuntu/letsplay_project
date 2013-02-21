@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<form method="POST" action="/create/">
+		<h1 id="customise-title">Customize a page for {{ name }}</h1>
+		<input id="create-btn" type="submit" class="btn btn-primary" value="Create">
+	</form>
+{% endblock %}
