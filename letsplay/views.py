@@ -10,7 +10,10 @@ def index(request):
 @require_http_methods(["POST"])
 def customise(request):
 	name = request.POST['name']
-	form_vars = {'name': name}
+	interests = request.POST.getlist('interest')
+	age = request.POST.getlist('age-group')
+	gender = request.POST.getlist('gender')
+	form_vars = {'name': name, 'interests' : interests, 'age' : age, 'gender' : gender}
 	return render_to_response('customise.html', form_vars, RequestContext(request))
 
 

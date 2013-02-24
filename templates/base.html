@@ -29,10 +29,10 @@
     {#% compress js %#}
     {#% endcompress %#}
     <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="{{ STATIC_URL }}js/main.js"></script>
     <script src="{{ STATIC_URL }}js/bootstrap.js"></script>
 <script>
 $(document).ready(function(){
-
     setTimeout(function(){
         $('#welcomeModal').modal('show');
         $('#welcomeModal').fadeIn();
