@@ -11,7 +11,7 @@ def project_path(*path_segments):
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
-DATABASES = {'default': {'ENGINE': 'django.db.backends.sqlite3', 'NAME': 'letsplay'}}
+DATABASES = {'default': {'ENGINE': 'django.db.backends.sqlite3', 'NAME': 'letsplay.db'}}
 
 
 
