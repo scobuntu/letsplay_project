@@ -18,8 +18,8 @@ GENDER = (
 class Game(models.Model):
 	#primary key id will be assigned by django?
 	name = models.CharField(max_length=128, unique=True)
-	ageLevel = models.CharField(max_length=2, choices=AGE_LEVEL_CHOICES)
-	sex = models.CharField(max_length=128)
+	ageLevel = models.CharField(max_length=128, choices=AGE_LEVEL_CHOICES)
+	sex = models.CharField(max_length=128, choices=GENDER)
 	category = models.CharField(max_length=128)
 	embedCode = models.TextField()
 	screenShot = models.FileField(upload_to='static/game/thumbnails', blank=True)
@@ -30,7 +30,7 @@ class Game(models.Model):
 class Video(models.Model):
 	#primary key id will be assigned by django?
 	name = models.CharField(max_length=128, unique=True)
-	ageLevel = models.CharField(max_length=2, choices=AGE_LEVEL_CHOICES)
+	ageLevel = models.CharField(max_length=128, choices=AGE_LEVEL_CHOICES)
 	sex = models.CharField(max_length=128, choices=GENDER)
 	category = models.CharField(max_length=128)
 	embedCode = models.TextField()
@@ -42,7 +42,7 @@ class Video(models.Model):
 class Background(models.Model):
 	#primary key id will be assigned by django?
 	name = models.CharField(max_length=128, unique=True)
-	ageLevel = models.CharField(max_length=2, choices=AGE_LEVEL_CHOICES)
+	ageLevel = models.CharField(max_length=128, choices=AGE_LEVEL_CHOICES)
 	sex = models.CharField(max_length=128, choices=GENDER)
 	category = models.CharField(max_length=128)
 	screenShot = models.FileField(upload_to='static/backgrounds', blank=True)
@@ -53,7 +53,7 @@ class Background(models.Model):
 class Avatar(models.Model):
 	#primary key id will be assigned by django?
 	name = models.CharField(max_length=128, unique=True)
-	ageLevel = models.CharField(max_length=2, choices=AGE_LEVEL_CHOICES)
+	ageLevel = models.CharField(max_length=128, choices=AGE_LEVEL_CHOICES)
 	sex = models.CharField(max_length=128, choices=GENDER)
 	category = models.CharField(max_length=128)
 	embedCode = models.TextField()
