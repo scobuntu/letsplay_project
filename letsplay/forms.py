@@ -5,9 +5,9 @@ class CustomiseForm(forms.Form):
 
 	GENDERS=(
 				('Gender', 'Gender'), 
-				('No Preference', 'No Preference'),
 				('Boy', 'Boy'), 
-				('Girl', 'Girl')
+				('Girl', 'Girl'),
+				('No Preference', 'No Preference'),
 			)
 	LEVEL=(
 				('Education Level', 'Education Level'), 
@@ -19,5 +19,5 @@ class CustomiseForm(forms.Form):
 	name = forms.CharField(max_length=100, initial="Name:")
 	gender = forms.ChoiceField(choices=GENDERS)
 	education = forms.ChoiceField(choices=LEVEL)
-	interests = forms.ModelChoiceField(widget=forms.CheckboxSelectMultiple, queryset=Category.objects.all())
+	interests = forms.ModelChoiceField(widget=forms.CheckboxSelectMultiple, queryset=Category.objects.all(), empty_label=None)
 

@@ -39,7 +39,7 @@ html {
 #form-spacing-left.span3 ul li {
 	display: block;
 	float: left;
-	margin: 0 30px 0 0;
+	margin: 0 20px 0 0;
 }
 
 #form-spacing-right{
@@ -47,7 +47,7 @@ html {
 }
 
 form label {
-	width: 80px;
+	width: 85px;
 	margin-bottom: 10px;
 }
 

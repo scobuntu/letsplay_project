@@ -17,7 +17,8 @@ GENDER = (
 class Category(models.Model):
 	name = models.CharField(max_length=128, unique=True)
 	
-	verbose_name_plural = "categories"
+	class Meta:
+		verbose_name_plural = "categories"
 
 	def __unicode__(self):
 		return self.name
