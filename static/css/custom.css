@@ -28,7 +28,18 @@ html {
 }
 
 #form-spacing-left {
-	margin: 0 10px 0 50px;
+	margin: 0;
+	float: right;
+}
+
+#form-spacing-left.span3 ul {
+	margin: 0;
+}
+
+#form-spacing-left.span3 ul li {
+	display: block;
+	float: left;
+	margin: 0 30px 0 0;
 }
 
 #form-spacing-right{
@@ -36,7 +47,12 @@ html {
 }
 
 form label {
-	width: 60px;
+	width: 80px;
+	margin-bottom: 10px;
+}
+
+form input[type="radio"], input[type="checkbox"] {
+	margin: 0 0 0 0;
 }
 
 .modal-header-top {

@@ -2,9 +2,11 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.views.decorators.http import require_http_methods
+from letsplay.forms import CustomiseForm
 
 def index(request):
-	return render_to_response('index.html', RequestContext(request))
+	form = CustomiseForm()
+	return render_to_response('index.html', {'form': form}, RequestContext(request))
 
 # Only allow a POST method to reach this page.
 @require_http_methods(["POST"])

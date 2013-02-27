@@ -14,13 +14,20 @@ GENDER = (
 	('Female','Female'),
 	)
 
+class Category(models.Model):
+	name = models.CharField(max_length=128, unique=True)
+	
+	verbose_name_plural = "categories"
+
+	def __unicode__(self):
+		return self.name
+
 # Create your models here.
 class Game(models.Model):
-	#primary key id will be assigned by django?
 	name = models.CharField(max_length=128, unique=True)
 	ageLevel = models.CharField(max_length=128, choices=AGE_LEVEL_CHOICES)
 	sex = models.CharField(max_length=128, choices=GENDER)
-	category = models.CharField(max_length=128)
+	category = models.ForeignKey('Category')
 	embedCode = models.TextField()
 	screenShot = models.FileField(upload_to='static/game/thumbnails', blank=True)
         
@@ -28,11 +35,10 @@ class Game(models.Model):
                 return self.name
 
 class Video(models.Model):
-	#primary key id will be assigned by django?
 	name = models.CharField(max_length=128, unique=True)
 	ageLevel = models.CharField(max_length=128, choices=AGE_LEVEL_CHOICES)
 	sex = models.CharField(max_length=128, choices=GENDER)
-	category = models.CharField(max_length=128)
+	category = models.ForeignKey('Category')
 	embedCode = models.TextField()
 	screenShot = models.FileField(upload_to='static/video/thumbnails', blank=True)
         
@@ -40,22 +46,20 @@ class Video(models.Model):
                 return self.name
                 
 class Background(models.Model):
-	#primary key id will be assigned by django?
 	name = models.CharField(max_length=128, unique=True)
 	ageLevel = models.CharField(max_length=128, choices=AGE_LEVEL_CHOICES)
 	sex = models.CharField(max_length=128, choices=GENDER)
-	category = models.CharField(max_length=128)
+	category = models.ForeignKey('Category')
 	screenShot = models.FileField(upload_to='static/backgrounds', blank=True)
         
         def __unicode__(self):
                 return self.name
                 
 class Avatar(models.Model):
-	#primary key id will be assigned by django?
 	name = models.CharField(max_length=128, unique=True)
 	ageLevel = models.CharField(max_length=128, choices=AGE_LEVEL_CHOICES)
 	sex = models.CharField(max_length=128, choices=GENDER)
-	category = models.CharField(max_length=128)
+	category = models.ForeignKey('Category')
 	embedCode = models.TextField()
 	screenShot = models.FileField(upload_to='static/avatar/thumbnails', blank=True)
         

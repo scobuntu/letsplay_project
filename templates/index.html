@@ -11,81 +11,33 @@
           <h2>Welcome to Let's Play!</h2>
   			  <h3 class="modal-header-top">Customize your content</h3>
           <form method="POST" action="/customise/">
-            {% csrf_token %}
-            <div class="well">
-              <div class="row">
+          {% csrf_token %}
+          <div class="well">
+            <div class="row">
               <div class="span3" id="form-left">
-                <h4>Tell us about your child:</h4>
-                  <label for="name">Name</label>
-                  <input id="name" name="name" type="text" value="Name:" />
-                  <div class="age-select">
-                    <label for="age-group">Age Group</label>
-                    <select id="age-group">
-                      <option>Age Group</option>
-                      <option name="age-group">Pre School</option>
-                      <option name="age-group">Primary School</option>
-                    </select> 
-                  </div>
-                  <div class="gender-select">
-                    <label for="gender">Gender</label>
-                    <select id="gender">
-                      <option>Gender</option>
-                      <option name="gender">Male</option>
-                      <option name="gender">Female</option>
-                    </select>
-                  </div>
+                <h4>Tell Us About Your Child</h4>
+                {{ form.name }}
+                <div class="age-select">
+                  {{ form.education }}
+                </div>
+                <!-- / age-select -->
+                <div class="gender-select">
+                  {{ form.gender }}
+                </div>
+                <!-- / gender -->
               </div>
-              <div class="span1" id="form-spacing-left">
+              <!-- / span3 -->
+              <div class="span3" id="form-spacing-left">
                 <h4>Interests</h4>
-                <label for="drawing" class="checkbox pull-left">
-                  <input type="checkbox" name="interest" id="drawing" value="drawing">
-                    Drawing
-                </label>
-                <label for="colouring" class="checkbox pull-left">
-                  <input type="checkbox" name="interest" id="colouring" value="colouring">
-                    Colouring
-                </label>
-                <label for="music" class="checkbox pull-left">
-                  <input type="checkbox" name="interest" id="music" value="music">
-                    Music
-                </label>
-                <label for="reading" class="checkbox pull-left">
-                  <input type="checkbox" name="interest" id="reading" value="reading">
-                    Reading
-                </label>
-                <label for="dolls" class="checkbox pull-left">
-                  <input type="checkbox" name="interest" id="dolls" value="dolls">
-                    Dolls
-                </label>
+                {{ form.interests }}
               </div>
-              <!-- / span1 -->
-              <div class="span1" id="form-spacing-right">
-                <label for="cars" class="checkbox pull-left">
-                  <input type="checkbox" name="interest" id="cars" value="cars">
-                    Cars
-                </label>
-                <label for="animals" class="checkbox pull-left">
-                  <input type="checkbox" name="interest" id="animals" value="animals">
-                    Animals
-                </label>
-                <label for="pirates" class="checkbox pull-left">
-                  <input type="checkbox" name="interest" id="pirates" value="pirates">
-                    Pirates
-                </label>
-                <label for="dinosaurs" class="checkbox pull-left">
-                  <input type="checkbox" name="interest" id="dinosaurs" value="dinosaurs">
-                    Dinosaurs
-                </label>
-                <label for="dress-up" class="checkbox pull-left">
-                  <input type="checkbox" name="interest" id="dress-up" value="dress-up">
-                    Dress Up
-                </label>
-                <input type="submit" class="btn btn-primary" value="Play">
-              </div>
+            </div>
+            <!-- / row -->
           </div>
+          <!-- / well -->
+          </form>
         </div>
-        </form>
-        </div>
+        <!-- / modal-body -->
   		  <div class="modal-footer">
   		  </div>
       </div>
