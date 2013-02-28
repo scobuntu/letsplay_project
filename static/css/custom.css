@@ -13,6 +13,7 @@ html {
 	padding: 20px;
 	background: #FFFFFF;
 	margin-top: 20px;
+	border: 1px solid #000000;
 }
 
 .modal-body h2 {
@@ -70,4 +71,6 @@ form input[type="radio"], input[type="checkbox"] {
 	float: right;
 }
 
-
+#avatar {
+	clear: both;
+}

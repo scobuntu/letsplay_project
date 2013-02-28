@@ -1,8 +1,8 @@
 from django.contrib import admin
-from letsplay.models import Category, Game, Video, Background, Avatar
+from letsplay.models import AgeGroup, Category, Content, Background, Avatar
 
 admin.site.register(Category)
-admin.site.register(Game)
-admin.site.register(Video)
+admin.site.register(AgeGroup)
+admin.site.register(Content)
 admin.site.register(Background)
 admin.site.register(Avatar)

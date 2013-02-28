@@ -1,5 +1,5 @@
 from django import forms
-from letsplay.models import Category
+from letsplay.models import AgeGroup, Category
 
 class CustomiseForm(forms.Form):
 
@@ -9,15 +9,9 @@ class CustomiseForm(forms.Form):
 				('Girl', 'Girl'),
 				('No Preference', 'No Preference'),
 			)
-	LEVEL=(
-				('Education Level', 'Education Level'), 
-				('Pre-School', 'Pre-School'),
-				('Primary School', 'Primary School'),
-				('No Preference', 'No Preference'), 
-			)
 
 	name = forms.CharField(max_length=100, initial="Name:")
 	gender = forms.ChoiceField(choices=GENDERS)
-	education = forms.ChoiceField(choices=LEVEL)
+	education = forms.ModelChoiceField(queryset=AgeGroup.objects.all(), empty_label="Age Level")
 	interests = forms.ModelChoiceField(widget=forms.CheckboxSelectMultiple, queryset=Category.objects.all(), empty_label=None)
 

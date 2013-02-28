@@ -14,6 +14,11 @@ GENDER = (
 	('Female','Female'),
 	)
 
+TYPES = (
+	('Game', 'Game'),
+	('Video', 'Video'),
+	)
+
 class Category(models.Model):
 	name = models.CharField(max_length=128, unique=True)
 	
@@ -24,47 +29,47 @@ class Category(models.Model):
 		return self.name
 
 # Create your models here.
-class Game(models.Model):
-	name = models.CharField(max_length=128, unique=True)
-	ageLevel = models.CharField(max_length=128, choices=AGE_LEVEL_CHOICES)
-	sex = models.CharField(max_length=128, choices=GENDER)
-	category = models.ForeignKey('Category')
-	embedCode = models.TextField()
-	screenShot = models.FileField(upload_to='static/game/thumbnails', blank=True)
-        
-        def __unicode__(self):
-                return self.name
 
-class Video(models.Model):
+
+class AgeGroup(models.Model):
+	
+	ageGroup = models.CharField(max_length=128)
+
+	def __unicode__(self):
+		return self.ageGroup
+
+class Content(models.Model):
+	content_type = models.CharField(max_length=128, choices=TYPES)
 	name = models.CharField(max_length=128, unique=True)
-	ageLevel = models.CharField(max_length=128, choices=AGE_LEVEL_CHOICES)
+	ageGroup = models.ForeignKey(AgeGroup)
 	sex = models.CharField(max_length=128, choices=GENDER)
-	category = models.ForeignKey('Category')
+	category = models.ManyToManyField('Category')
 	embedCode = models.TextField()
-	screenShot = models.FileField(upload_to='static/video/thumbnails', blank=True)
-        
-        def __unicode__(self):
-                return self.name
+	screenShot = models.FileField(upload_to='static/content/thumbnails', blank=True)
+	
+	def __unicode__(self):
+		return self.name
+	
                 
 class Background(models.Model):
 	name = models.CharField(max_length=128, unique=True)
-	ageLevel = models.CharField(max_length=128, choices=AGE_LEVEL_CHOICES)
+	ageGroup = models.ForeignKey(AgeGroup)
 	sex = models.CharField(max_length=128, choices=GENDER)
 	category = models.ForeignKey('Category')
 	screenShot = models.FileField(upload_to='static/backgrounds', blank=True)
-        
-        def __unicode__(self):
-                return self.name
+
+	def __unicode__(self):
+		return self.name
                 
 class Avatar(models.Model):
 	name = models.CharField(max_length=128, unique=True)
-	ageLevel = models.CharField(max_length=128, choices=AGE_LEVEL_CHOICES)
+	ageGroup = models.ForeignKey(AgeGroup)
 	sex = models.CharField(max_length=128, choices=GENDER)
 	category = models.ForeignKey('Category')
 	embedCode = models.TextField()
 	screenShot = models.FileField(upload_to='static/avatar/thumbnails', blank=True)
-        
-        def __unicode__(self):
-                return self.name
+
+	def __unicode__(self):
+		return self.name
     
                 
