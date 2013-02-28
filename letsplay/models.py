@@ -28,8 +28,6 @@ class Category(models.Model):
 	def __unicode__(self):
 		return self.name
 
-# Create your models here.
-
 
 class AgeGroup(models.Model):
 	

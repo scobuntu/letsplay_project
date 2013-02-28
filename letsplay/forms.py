@@ -10,8 +10,8 @@ class CustomiseForm(forms.Form):
 				('No Preference', 'No Preference'),
 			)
 
-	name = forms.CharField(max_length=100, initial="Name:")
+	name = forms.CharField(max_length=100, initial="Name")
 	gender = forms.ChoiceField(choices=GENDERS)
-	education = forms.ModelChoiceField(queryset=AgeGroup.objects.all(), empty_label="Age Level")
+	education = forms.ModelChoiceField(queryset=AgeGroup.objects.all(), empty_label="Age")
 	interests = forms.ModelChoiceField(widget=forms.CheckboxSelectMultiple, queryset=Category.objects.all(), empty_label=None)
 
