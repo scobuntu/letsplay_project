@@ -13,14 +13,14 @@ def index(request):
 @require_http_methods(["POST"])
 def customise(request):
 	name = request.POST['name']
-	interests = request.POST.getlist('interest')
-	age = request.POST.getlist('age-group')
-	gender = request.POST.getlist('gender')
-	form_vars = {'name': name, 'interests' : interests, 'age' : age, 'gender' : gender}
+	age = request.POST['age']
+	#sex = request.POST['sex']
+	interests = request.POST.getlist('interests')
+	games = Content.objects.filter(content_type='Game', category__pk__in=interests, ageGroup__pk=age)
+	form_vars = {'name': name, 'games' : games}
 	#could create a user table that will save information
 	#user = User(name= name, interests=interests, age=age, gender=gender)
 	#user.save()
-	Content.objects.filter(cateogry_contains='interests')
 	return render_to_response('customise.html', form_vars, RequestContext(request))
 
 

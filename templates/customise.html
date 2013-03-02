@@ -6,18 +6,91 @@
 	<form method="POST" action="/create/">
 		<h1 id="customise-title">Customize a page for {{ name }}</h1>
 		<input id="create-btn" type="submit" class="btn btn-primary" value="Create">
-		<div class="pull-left" id="avatar">
-			<h3>Select an Avatar</h3>
-			<ul class="thumbnails">
-				<li class="span3">
-					<a href="#" class="thumbnail">
-						<img data-drc="holder/js/300x200" alt="" />
-					</a>
-				</li>
-			</ul>
+		<div class="row">
+			<div class="pull-left span5" id="avatar">
+				<h3>Select an Avatar</h3>
+				<ul class="thumbnails">
+					<li class="thumbnail-small">
+						<a href="#" class="thumbnail">
+							<img data-src="holder/js/300x200" alt="" />
+						</a>
+					</li>
+					<li class="thumbnail-small">
+						<a href="#" class="thumbnail">
+							<img data-src="holder/js/300x200" alt="" />
+						</a>
+					</li>
+					<li class="thumbnail-small">
+						<a href="#" class="thumbnail">
+							<img data-src="holder/js/300x200" alt="" />
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- / avatar -->
+			<div class="pull-right span6" id="background">
+				<h3>Select a Background</h3>
+				<ul class="thumbnails">
+					<li class="span2">
+						<a href="#" class="thumbnail">
+							<img data-src="holder/js/300x200" alt="" />
+						</a>
+					</li>
+					<li class="span2">
+						<a href="#" class="thumbnail">
+							<img data-src="holder/js/300x200" alt="" />
+						</a>
+					</li>
+					<li class="span2">
+						<a href="#" class="thumbnail">
+							<img data-src="holder/js/300x200" alt="" />
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- / background -->
 		</div>
-		<!-- / avatar -->
-	</form>
+		<!-- / row -->
+		<div class="row">
+			<div class="pull-left span5" id="games">
+				<h3>Select Games</h3>
+			<ul class="thumbnails">
+			{% for game in games %}
+				<li class="span2">
+					<div class="thumbnail">
+						<img src="/{{ game.screenShot }}" />
+						<h3>{{ game.name }}</h3>
+					</div>
+					<!-- / thumbnail -->
+				</li>
+			{% endfor %}
+			</ul>
+			</div>
+			<!-- / games -->
+			<div class="pull-right" id="videos">
+				<h3>Select Videos</h3>
+				<ul class="thumbnails">
+					<li class="span2">
+						<a href="#" class="thumbnail">
+							<img data-src="holder/js/300x200" alt="" />
+						</a>
+					</li>
+					<li class="span2">
+						<a href="#" class="thumbnail">
+							<img data-src="holder/js/300x200" alt="" />
+						</a>
+					</li>
+					<li class="span2">
+						<a href="#" class="thumbnail">
+							<img data-src="holder/js/300x200" alt="" />
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- / videos -->
+		</div>
+		<!-- / row -->
+		</form>
 	</div>
 	<!-- / customise-content -->
 </div>

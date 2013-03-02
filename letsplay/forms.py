@@ -3,7 +3,7 @@ from letsplay.models import AgeGroup, Category
 
 class CustomiseForm(forms.Form):
 
-	GENDERS=(
+	SEX =(
 				('Gender', 'Gender'), 
 				('Boy', 'Boy'), 
 				('Girl', 'Girl'),
@@ -11,7 +11,7 @@ class CustomiseForm(forms.Form):
 			)
 
 	name = forms.CharField(max_length=100, initial="Name")
-	gender = forms.ChoiceField(choices=GENDERS)
-	education = forms.ModelChoiceField(queryset=AgeGroup.objects.all(), empty_label="Age")
+	sex = forms.ChoiceField(choices=SEX)
+	age = forms.ModelChoiceField(queryset=AgeGroup.objects.all(), empty_label="Age")
 	interests = forms.ModelChoiceField(widget=forms.CheckboxSelectMultiple, queryset=Category.objects.all(), empty_label=None)
 
