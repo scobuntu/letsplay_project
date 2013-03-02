@@ -14,9 +14,9 @@ def index(request):
 def customise(request):
 	name = request.POST['name']
 	age = request.POST['age']
-	#sex = request.POST['sex']
+	sex = request.POST['sex']
 	interests = request.POST.getlist('interests')
-	games = Content.objects.filter(content_type='Game', category__pk__in=interests, ageGroup__pk=age)
+	games = Content.objects.filter(content_type='Game', category__pk__in=interests, ageGroup__pk=age, sex=sex)
 	form_vars = {'name': name, 'games' : games}
 	#could create a user table that will save information
 	#user = User(name= name, interests=interests, age=age, gender=gender)

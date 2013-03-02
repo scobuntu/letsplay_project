@@ -3,12 +3,13 @@ from letsplay.models import AgeGroup, Category
 
 class CustomiseForm(forms.Form):
 
-	SEX =(
-				('Gender', 'Gender'), 
-				('Boy', 'Boy'), 
-				('Girl', 'Girl'),
-				('No Preference', 'No Preference'),
-			)
+	SEX = (
+		('Gender', 'Gender'),
+		('N/A', 'N/A'),
+		('Male', 'Male'),
+		('Female','Female'),
+		)
+
 
 	name = forms.CharField(max_length=100, initial="Name")
 	sex = forms.ChoiceField(choices=SEX)
