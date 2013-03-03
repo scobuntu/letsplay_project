@@ -15,10 +15,10 @@
 <body id="main">
 <div class="navbar navbar-static-top">
   <div class="navbar-inner">
-    <a class="brand" href="#">Let's Play</a>
+    <a class="brand" href="{% url index %}"><IMG SRC="{{ STATIC_URL}}img/letsplaylogo.png"></a>
     <ul class="nav">
-      <li class="active"><a href="{% url index %}">Home</a></li>
-      <li><a href="#">About</a></li>
+      <li class="active"><a href="{% url index %}"><h3>Home</h3></a></li>
+      <li><a href="#"><h3>About</h3></a></li>
     </ul>
   </div>
 </div>

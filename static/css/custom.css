@@ -10,18 +10,26 @@ html {
 }
 
 .container {
+	font-family:"Comic Sana MS",cursive,sans-serif;
 	padding: 20px;
-	background: #FFFFFF;
+	background-color:rgba(255,255,255,0.9);
 	margin-top: 20px;
-	border: 1px solid #000000;
+	border: 2px solid #000000;
 }
 
+
+
 .modal-body h2 {
+	color: #0000ff;
 	text-align: center;
+	font-family:"Comic Sana MS",cursive,sans-serif;
 }
 
 #form-left {
+	color: #0077aa;
 	margin: 0 0 0 30px;
+	font-family:"Comic Sana MS",cursive,sans-serif;
+
 }
 
 #form-left label {
@@ -29,22 +37,29 @@ html {
 }
 
 #form-spacing-left {
+	color: #0077aa;
 	margin: 0;
 	float: right;
+	font-family:"Comic Sana MS",cursive,sans-serif;
 }
 
 #form-spacing-left.span3 ul {
+	color: #0077aa;
 	margin: 0;
+	font-family:"Comic Sana MS",cursive,sans-serif;
 }
 
 #form-spacing-left.span3 ul li {
+	color: #dd3574;
 	display: block;
 	float: left;
 	margin: 0 20px 0 0;
+	font-family:"Comic Sana MS",cursive,sans-serif;
 }
 
 #form-spacing-right{
 	margin: 40px 0 0 30px;
+	font-family:"Comic Sana MS",cursive,sans-serif;
 }
 
 form label {
@@ -57,7 +72,9 @@ form input[type="radio"], input[type="checkbox"] {
 }
 
 .modal-header-top {
+	color: #dd3377;
 	text-align: center;
+	font-family:"Comic Sana MS",cursive,sans-serif;
 }
 
 #customise-title {
