@@ -39,6 +39,11 @@ $(document).ready(function(){
     }, 700);
 });
 </script>
+<script>
+$(".checkboxes input:checkbox:first").change(function () {
+        $(".checkboxes").find(':checkbox').prop("checked", this.checked);
+    });
+</script>
 <style>
 .modal-backdrop, .modal-backdrop.fade.in {
     opacity: 0.3;

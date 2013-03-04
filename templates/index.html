@@ -29,7 +29,13 @@
               <!-- / span3 -->
               <div class="span3" id="form-spacing-left">
                 <h4>Interests</h4>
-                {{ form.interests }}
+                <div class="checkboxes">
+                  <label>
+                    <input type="checkbox" /> Select All
+                  </label>
+                  {{ form.interests }}
+                </div>
+                <!-- / checkboxes -->
               </div>
             </div>
             <!-- / row -->
@@ -42,5 +48,4 @@
   		  </div>
       </form>
       </div>
-
 {% endblock %}

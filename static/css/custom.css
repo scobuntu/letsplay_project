@@ -63,7 +63,7 @@ html {
 }
 
 form label {
-	width: 85px;
+	width: 90px;
 	margin-bottom: 10px;
 }
 
@@ -102,6 +102,6 @@ form input[type="radio"], input[type="checkbox"] {
 	height: 90px;
 }
 
-.content-grid {
-
+.modal-body {
+	overflow-y: hidden;
 }
