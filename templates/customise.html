@@ -57,27 +57,27 @@
 				<h3>Select Games</h3>
 			<ul class="thumbnails">
 			{% for game in games %}
-					<li class="span2">
-						<a href="#myModalGame" role="button" data-toggle="modal"class="thumbnail">
-							<img src="/{{ game.screenShot }}" alt="" />
-							<h3>{{ game.name }}</h3>
-						</a>
-						<input type="checkbox" value="{{ game.id }}" name="choices" />
-					</li>
-					<!-- Modal -->
-<div id="myModalGame" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-    <h3 id="myModalLabel">{{ game.name }}</h3>
-  </div>
-  <div class="modal-body">
-    {{ game.embedCode|safe }}>
-  </div>
-  <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-    <button class="btn btn-primary">Save changes</button>
-  </div>
-</div>
+				<li class="span2">
+					<a href="#myModalGame" role="button" data-toggle="modal"class="thumbnail">
+						<img src="/{{ game.screenShot }}" alt="" />
+						<h3>{{ game.name }}</h3>
+					</a>
+					<input type="checkbox" value="{{ game.id }}" name="choices" />
+				</li>
+			<!-- Modal -->
+			<div id="myModalGame" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-header">
+			    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			    <h3 id="myModalLabel">{{ game.name }}</h3>
+			  </div>
+			  <div class="modal-body">
+			    {{ game.embedCode|safe }}>
+			  </div>
+			  <div class="modal-footer">
+			    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+			    <button class="btn btn-primary">Save changes</button>
+			  </div>
+			</div>
 			{% endfor %}
 			</ul>
 			</div>

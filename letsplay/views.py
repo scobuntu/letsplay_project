@@ -21,7 +21,7 @@ def customise(request):
 	
 	content = Content.objects.all()
 
-	if age == '5':
+	if age == '5' or age == '':
 		content = content.all()
 	else:
 		content = content.filter(ageGroup=age)
