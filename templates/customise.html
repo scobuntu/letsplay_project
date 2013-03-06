@@ -10,17 +10,17 @@
 			<div class="pull-left span5" id="avatar">
 				<h3>Select an Avatar</h3>
 				<ul class="thumbnails">
-					<li class="thumbnail-small">
+					<li class="span2">
 						<a href="#" class="thumbnail">
 							<img data-src="holder/js/300x200" alt="" />
 						</a>
 					</li>
-					<li class="thumbnail-small">
+					<li class="span2">
 						<a href="#" class="thumbnail">
 							<img data-src="holder/js/300x200" alt="" />
 						</a>
 					</li>
-					<li class="thumbnail-small">
+					<li class="span2">
 						<a href="#" class="thumbnail">
 							<img data-src="holder/js/300x200" alt="" />
 						</a>
@@ -52,39 +52,59 @@
 		</div>
 		<!-- / row -->
 		<div class="row">
-			<div class="pull-left span5" id="games">
+			<div class="pull-left span6" id="games">
 				<h3>Select Games</h3>
 			<ul class="thumbnails">
 			{% for game in games %}
-				<li class="span2">
-					<div class="thumbnail">
-						<img src="/{{ game.screenShot }}" />
-						<h3>{{ game.name }}</h3>
-					</div>
-					<!-- / thumbnail -->
-				</li>
+					<li class="span2">
+						<a href="#myModalGame" role="button" data-toggle="modal"class="thumbnail">
+							<img src="/{{ game.screenShot }}" alt="" />
+							<h3>{{ game.name }}</h3>
+						</a>
+					</li>
+					<!-- Modal -->
+<div id="myModalGame" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3 id="myModalLabel">{{ game.name }}</h3>
+  </div>
+  <div class="modal-body">
+    {{ game.embedCode|safe }}>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary">Save changes</button>
+  </div>
+</div>
 			{% endfor %}
 			</ul>
 			</div>
 			<!-- / games -->
-			<div class="pull-right" id="videos">
+			<div class="pull-left" id="videos">
 				<h3>Select Videos</h3>
 				<ul class="thumbnails">
+					{% for video in videos %}
 					<li class="span2">
-						<a href="#" class="thumbnail">
-							<img data-src="holder/js/300x200" alt="" />
+						<a href="#myModalVid" role="button" data-toggle="modal" class="thumbnail">
+							<img src="/{{ video.screenShot }}" alt="" />
+							<h3>{{ video.name }}</h3>
 						</a>
 					</li>
-					<li class="span2">
-						<a href="#" class="thumbnail">
-							<img data-src="holder/js/300x200" alt="" />
-						</a>
-					</li>
-					<li class="span2">
-						<a href="#" class="thumbnail">
-							<img data-src="holder/js/300x200" alt="" />
-						</a>
-					</li>
+					<!-- Modal -->
+<div id="myModalVid" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3 id="myModalLabel">{{ video.name }}</h3>
+  </div>
+  <div class="modal-body">
+    {{ video.embedCode|safe }}>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary">Save changes</button>
+  </div>
+</div>
+					{% endfor %}
 				</ul>
 			</div>
 			<!-- / videos -->
