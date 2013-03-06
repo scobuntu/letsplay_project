@@ -13,10 +13,12 @@ def index(request):
 @require_http_methods(["POST"])
 def customise(request):
 	name = request.POST['name']
+	request.session['name'] = name
+	
 	interests = request.POST.getlist('interests')
 	age = request.POST.get('age')
 	gender = request.POST.get('sex')
-
+	
 	content = Content.objects.all()
 
 	if age == '5':
@@ -42,10 +44,18 @@ def customise(request):
 	        'gender' : gender,
 	        'age' : age
 	        }
-
-	
 	return render_to_response('customise.html', form_vars, RequestContext(request))
 
+# Only allow a POST method to reach this page.
+@require_http_methods(["POST"])
+def play(request):
+	
+	name = request.session['name']
+	choice_list = []
+	choices = request.POST.getlist('choices')
+	
+	return render_to_response('kids_page.html', {'choices' : choices, 'name' : name}, RequestContext(request))
+	
 
 
 	
