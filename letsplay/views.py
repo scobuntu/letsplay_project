@@ -33,7 +33,17 @@ def customise(request):
 		content = content.all()
 	else:
 		content = content.filter(category__pk__in=interests)
-	form_vars = {'name': name, 'interests' : interests, 'games' : games, 'videos' : selectedVideos, 'gender' : gender, 'age' : age}
+	
+	form_vars = {
+	        'name': name,
+	        'interests' : interests,
+	        'games' : content.filter(content_type='Game'), 
+	        'videos' : content.filter(content_type='Video'), 
+	        'gender' : gender,
+	        'age' : age
+	        }
+
+	
 	return render_to_response('customise.html', form_vars, RequestContext(request))
 
 

@@ -100,6 +100,12 @@ form input[type="radio"], input[type="checkbox"] {
 	height: 90px;
 }
 
+#myModal {
+	width: auto;
+}
+
 .modal-body {
 	overflow-y: hidden;
+  	max-height: auto;
+  	padding: 15px;
 }
