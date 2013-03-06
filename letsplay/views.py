@@ -13,14 +13,27 @@ def index(request):
 @require_http_methods(["POST"])
 def customise(request):
 	name = request.POST['name']
-	age = request.POST['age']
-	sex = request.POST['sex']
 	interests = request.POST.getlist('interests')
-	games = Content.objects.filter(content_type='Game', category__pk__in=interests, ageGroup__pk=age, sex=sex)
-	form_vars = {'name': name, 'games' : games}
-	#could create a user table that will save information
-	#user = User(name= name, interests=interests, age=age, gender=gender)
-	#user.save()
+	age = request.POST.get('age')
+	gender = request.POST.get('sex')
+
+	content = Content.objects.all()
+
+	if age == '5':
+		content = content.all()
+	else:
+		content = content.filter(ageGroup=age)
+	
+	if gender == 'Male' or gender=='Female':
+		content = content.filter(sex=gender)
+	else:
+		content = content.all()
+
+	if len(interests) == len(Category.objects.all()) or interests == []:
+		content = content.all()
+	else:
+		content = content.filter(category__pk__in=interests)
+	form_vars = {'name': name, 'interests' : interests, 'games' : games, 'videos' : selectedVideos, 'gender' : gender, 'age' : age}
 	return render_to_response('customise.html', form_vars, RequestContext(request))
 
 
