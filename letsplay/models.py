@@ -1,7 +1,7 @@
 from django.db import models
 
 AGE_LEVEL_CHOICES = (
-	('N/A', 'N/A'),
+	('All', 'All'),
 	('0-2', 'nursery'),
 	('3-4','preschool'),
 	('5-7','primary'),
@@ -9,9 +9,9 @@ AGE_LEVEL_CHOICES = (
 	)
 
 GENDER = (
-	('N/A', 'N/A'),
-	('Male', 'Male'),
-	('Female','Female'),
+	('No preference', 'No preference'),
+	('Male', 'Boy'),
+	('Female','Girl'),
 	)
 
 TYPES = (

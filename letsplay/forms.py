@@ -5,9 +5,9 @@ class CustomiseForm(forms.Form):
 
 	SEX = (
 		('Gender', 'Gender'),
-		('N/A', 'N/A'),
-		('Male', 'Male'),
-		('Female','Female'),
+		('No preference', 'No preference'),
+		('Male', 'Boy'),
+		('Female','Girl'),
 		)
 
 
