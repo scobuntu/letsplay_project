@@ -11,21 +11,13 @@
 			<div class="pull-left span5" id="avatar">
 				<h3>Select an Avatar</h3>
 				<ul class="thumbnails">
-					<li class="span2">
+					{% for avatar in avatars %}
+					<li class="span1">
 						<a href="#" class="thumbnail">
-							<img data-src="holder/js/300x200" alt="" />
+							<img src="/{{ avatar.screenShot}}" alt="{{ avatar.name }}" />
 						</a>
 					</li>
-					<li class="span2">
-						<a href="#" class="thumbnail">
-							<img data-src="holder/js/300x200" alt="" />
-						</a>
-					</li>
-					<li class="span2">
-						<a href="#" class="thumbnail">
-							<img data-src="holder/js/300x200" alt="" />
-						</a>
-					</li>
+					{% endfor %}	
 				</ul>
 			</div>
 			<!-- / avatar -->

@@ -20,6 +20,7 @@ def customise(request):
 	gender = request.POST.get('sex')
 	
 	content = Content.objects.all()
+	avatars = Avatar.objects.all()
 
 	if age == '5' or age == '':
 		content = content.all()
@@ -36,15 +37,15 @@ def customise(request):
 	else:
 		content = content.filter(category__pk__in=interests)
 	
-	form_vars = {
+	content_vars = {
 	        'name': name,
 	        'interests' : interests,
 	        'games' : content.filter(content_type='Game'), 
-	        'videos' : content.filter(content_type='Video'), 
-	        'gender' : gender,
-	        'age' : age
+	        'videos' : content.filter(content_type='Video'),
+	        'avatars' : avatars.all(),
+	        'backgrounds' : Background.objects.all()
 	        }
-	return render_to_response('customise.html', form_vars, RequestContext(request))
+	return render_to_response('customise.html', content_vars, RequestContext(request))
 
 # Only allow a POST method to reach this page.
 @require_http_methods(["POST"])
