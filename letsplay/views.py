@@ -52,6 +52,7 @@ def customise(request):
 def play(request):
 	
 	name = request.session['name']
+	avatar = request.POST.get('avatar')
 	choice_list = request.POST.getlist('choices')
 	choices = Content.objects.filter(id__in=choice_list)
 
@@ -59,6 +60,7 @@ def play(request):
 		'name' : name,
 		'games' : choices.filter(content_type='Game'),
 		'videos' : choices.filter(content_type='Video'),
+		'avatar' : Avatar.objects.get(pk=avatar)
 		}
 	
 	return render_to_response('kids_page.html', content_vars, RequestContext(request))

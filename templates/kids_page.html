@@ -3,12 +3,17 @@
 {% block content %}
 <div class="container">
 	<div id="customise-content">
-		<header>
-			<img src="{{ avatar.screenShot }}" alt="{{ avatar.name }}" />
-		<hgroup>
-			<h1>Hello {{ name }}!</h1>
-			<h2>What do you want to play today?</h2>
-		</hgroup>
+		<div class="row">
+			<header>
+				<div id="main-avatar" class="pull-left span2">
+					{{ avatar.embedCode|safe }}
+				</div>
+			<hgroup>
+				<h1>Hello {{ name }}!</h1>
+				<h2>What do you want to play today?</h2>
+			</hgroup>
+		</div>
+		<!-- / row -->
 		<div class="row">
 			<div class="pull-left span6" id="games">
 				<h3>Play a Game</h3>
