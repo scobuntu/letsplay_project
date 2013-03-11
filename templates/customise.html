@@ -6,7 +6,7 @@
 	<form method="POST" action="/play/">
 	{% csrf_token %}
 		<h1 id="customise-title">Customise a page for {{ name }}</h1>
-		<input id="create-btn" type="submit" class="btn btn-primary" value="Create">
+		<input id="create-btn" type="submit" class="btn btn-primary" value="Play">
 		<div class="row">
 			<div class="pull-left span5" id="avatar">
 				<h3>Select an Avatar</h3>
@@ -53,9 +53,9 @@
 				<li class="span2">
 					<a href="#myModalGame" role="button" data-toggle="modal"class="thumbnail">
 						<img src="/{{ game.screenShot }}" alt="" />
-						<h3>{{ game.name }}</h3>
 					</a>
 					<input type="checkbox" value="{{ game.id }}" name="choices" />
+					<h6>{{ game.name }}</h6>
 				</li>
 			<!-- Modal -->
 			<div id="myModalGame" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -68,7 +68,6 @@
 			  </div>
 			  <div class="modal-footer">
 			    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-			    <button class="btn btn-primary">Save changes</button>
 			  </div>
 			</div>
 			{% endfor %}
@@ -82,9 +81,9 @@
 					<li class="span2">
 						<a href="#myModalVid" role="button" data-toggle="modal" class="thumbnail">
 							<img src="/{{ video.screenShot }}" alt="" />
-							<h3>{{ video.name }}</h3>
 						</a>
 						<input type="checkbox" value="{{ video.id }}" name="choices" />
+						<h6>{{ video.name }}</h6>
 					</li>
 					<!-- Modal -->
 <div id="myModalVid" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -97,7 +96,6 @@
   </div>
   <div class="modal-footer">
     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-    <button class="btn btn-primary">Save changes</button>
   </div>
 </div>
 					{% endfor %}
