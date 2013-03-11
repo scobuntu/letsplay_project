@@ -3,8 +3,63 @@
 {% block content %}
 <div class="container">
 	<div id="customise-content">
-	{{ choices }}
-	{{ name }}
+		<header>
+			<img src="{{ avatar.screenShot }}" alt="{{ avatar.name }}" />
+		<hgroup>
+			<h1>Hello {{ name }}!</h1>
+			<h2>What do you want to play today?</h2>
+		</hgroup>
+		<div class="row">
+			<div class="pull-left span6" id="games">
+				<h3>Play a Game</h3>
+			<ul class="thumbnails">
+			{% for game in games %}
+				<li class="span2">
+					<a href="#myModalGame" role="button" data-toggle="modal"class="thumbnail">
+						<img src="/{{ game.screenShot }}" alt="" />
+						<h3>{{ game.name }}</h3>
+					</a>
+				</li>
+			<!-- Modal -->
+			<div id="myModalGame" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-header">
+			    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			    <h3 id="myModalLabel">{{ game.name }}</h3>
+			  </div>
+			  <div class="modal-body">
+			    {{ game.embedCode|safe }}>
+			  </div>
+			</div>
+			{% endfor %}
+			</ul>
+			</div>
+			<!-- / games -->
+			<div class="pull-left span6" id="videos">
+				<h3>Watch a Video</h3>
+				<ul class="thumbnails">
+					{% for video in videos %}
+					<li class="span2">
+						<a href="#myModalVid" role="button" data-toggle="modal" class="thumbnail">
+							<img src="/{{ video.screenShot }}" alt="" />
+							<h3>{{ video.name }}</h3>
+						</a>
+					</li>
+					<!-- Modal -->
+<div id="myModalVid" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		<h3 id="myModalLabel">{{ game.name }}</h3>
+	</div>
+  <div class="modal-body">
+    {{ video.embedCode|safe }}>
+  </div>
+</div>
+					{% endfor %}
+				</ul>
+			</div>
+			<!-- / videos -->
+		</div>
+		<!-- / row -->
 	</div>
 	<!-- / customise-content -->
 </div>
