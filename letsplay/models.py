@@ -31,10 +31,10 @@ class Category(models.Model):
 
 class AgeGroup(models.Model):
 	
-	ageGroup = models.CharField(max_length=128)
+	age = models.CharField(max_length=128)
 
 	def __unicode__(self):
-		return self.ageGroup
+		return self.age
 
 class Content(models.Model):
 	content_type = models.CharField(max_length=128, choices=TYPES)
@@ -44,6 +44,7 @@ class Content(models.Model):
 	category = models.ManyToManyField('Category')
 	embedCode = models.TextField()
 	screenShot = models.FileField(upload_to='static/content/thumbnails', blank=True)
+	audio = models.FileField(upload_to='static/content/sounds', blank=True)
 	
 	def __unicode__(self):
 		return self.name
@@ -51,9 +52,6 @@ class Content(models.Model):
                 
 class Background(models.Model):
 	name = models.CharField(max_length=128, unique=True)
-	ageGroup = models.ForeignKey(AgeGroup)
-	sex = models.CharField(max_length=128, choices=GENDER)
-	category = models.ForeignKey('Category')
 	screenShot = models.FileField(upload_to='static/backgrounds', blank=True)
 
 	def __unicode__(self):
@@ -61,9 +59,6 @@ class Background(models.Model):
                 
 class Avatar(models.Model):
 	name = models.CharField(max_length=128, unique=True)
-	ageGroup = models.ForeignKey(AgeGroup)
-	sex = models.CharField(max_length=128, choices=GENDER)
-	category = models.ForeignKey('Category')
 	embedCode = models.TextField()
 	screenShot = models.FileField(upload_to='static/avatar/thumbnails', blank=True)
 

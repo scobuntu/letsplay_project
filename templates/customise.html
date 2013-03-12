@@ -44,7 +44,7 @@
 			<ul class="thumbnails">
 			{% for game in games %}
 				<li class="span2">
-					<a href="#game{{ forloop.counter }}" role="button" data-toggle="modal"class="thumbnail">
+					<a onmouseover="mouseoversound.playclip()" href="#game{{ forloop.counter }}" role="button" data-toggle="modal"class="thumbnail">
 						<img src="/{{ game.screenShot }}" alt="" />
 					</a>
 					<input type="checkbox" value="{{ game.id }}" name="choices" />

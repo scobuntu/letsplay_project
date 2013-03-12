@@ -87,35 +87,35 @@
         "pk": 1,
         "model": "letsplay.agegroup",
         "fields": {
-            "ageGroup": "0-2"
+            "age": "0-2"
         }
     },
     {
         "pk": 2,
         "model": "letsplay.agegroup",
         "fields": {
-            "ageGroup": "3-4"
+            "age": "3-4"
         }
     },
     {
         "pk": 3,
         "model": "letsplay.agegroup",
         "fields": {
-            "ageGroup": "5-7"
+            "age": "5-7"
         }
     },
     {
         "pk": 4,
         "model": "letsplay.agegroup",
         "fields": {
-            "ageGroup": "8-10"
+            "age": "8-10"
         }
     },
     {
         "pk": 5,
         "model": "letsplay.agegroup",
         "fields": {
-            "ageGroup": "All"
+            "age": "All"
         }
     },
     {
@@ -128,10 +128,12 @@
             ],
             "name": "Angel Cat Dress Up",
             "screenShot": "static/content/thumbnails/DressUpCatGame.jpg",
+		"audio" : "static/content/sounds/catdressup.wav",
             "sex": "Female",
             "content_type": "Game",
             "embedCode": "<object width=\"700\" height=\"525\"><param name=\"movie\" value=\"http://cdn.publishers.spilgames.com/mirror/flash/a/Angel%20Cat%20Dress%20Up.swf\"></param><embed src=\"http://cdn.publishers.spilgames.com/mirror/flash/a/Angel%20Cat%20Dress%20Up.swf\" type=\"application/x-shockwave-flash\" width=\"700\" height=\"525\"></embed></object>",
             "ageGroup": 3
+
         }
     },
     {
@@ -143,6 +145,7 @@
             ],
             "name": "Count the Sheep",
             "screenShot": "static/content/thumbnails/CountTheSheep.png",
+            "audio" : "static/content/sounds/countsheep.wav",
             "sex": "N/A",
             "content_type": "Game",
             "embedCode": "<embed src=\"http://games.mochiads.com/c/g/count-the-sheep_v193670/countsheep_e.swf\" menu=\"false\" quality=\"high\" width=\"600\" height=\"400\" type=\"application/x-shockwave-flash\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\" />",
@@ -158,6 +161,7 @@
             ],
             "name": "Memory Sequence",
             "screenShot": "static/content/thumbnails/MemorySequence.png",
+            "audio" : "static/content/sounds/memorysequence.wav",
             "sex": "N/A",
             "content_type": "Game",
             "embedCode": "<embed src=\"http://games.mochiads.com/c/g/memory-iv_v654507/memory4.swf\" menu=\"false\" quality=\"high\" width=\"600\" height=\"400\" type=\"application/x-shockwave-flash\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\" />",
@@ -173,6 +177,7 @@
             ],
             "name": "Memory Position",
             "screenShot": "static/content/thumbnails/MemoryPosition.png",
+            "audio" : "static/content/sounds/memoryposition.wav",
             "sex": "N/A",
             "content_type": "Game",
             "embedCode": "v_v528060/memory5.swf\" menu=\"false\" quality=\"high\" width=\"600\" height=\"400\" type=\"application/x-shockwave-flash\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\" />",
@@ -188,6 +193,7 @@
             ],
             "name": "Muscle Cars",
             "screenShot": "static/content/thumbnails/musclecars_250x200_site.png.jpg",
+            "audio" : "static/content/sounds/musclecars.wav",
             "sex": "Male",
             "content_type": "Game",
             "embedCode": "<embed width=\"640\" height=\"360\" base=\"http://external.kongregate-games.com/gamez/0015/6422/live/\" src=\"http://external.kongregate-games.com/gamez/0015/6422/live/embeddable_156422.swf\" type=\"application/x-shockwave-flash\"></embed><br/>Play free games at <a href=\"http://www.kongregate.com/\">Kongregate</a>",
@@ -203,6 +209,7 @@
             ],
             "name": "What do they eat?",
             "screenShot": "static/content/thumbnails/WhatDoTheyEat.jpg",
+            "audio" : "static/content/sounds/whattheyeat.wav",
             "sex": "N/A",
             "content_type": "Game",
             "embedCode": "<object width=\"640\" height=\"480\"><param name=\"movie\" value=\"http://www.fupa.com/swf/kids-games-what-do-they-eat/whatdotheyeat_mochi_1_0_2.swf\"></param><embed src=\"http://www.fupa.com/swf/kids-games-what-do-they-eat/whatdotheyeat_mochi_1_0_2.swf\" type=\"application/x-shockwave-flash\" width=\"640\" height=\"480\"><a href=\"http://www.fupa.com/\">Find more free online flash games at Fupa.com</a></embed></object><br/><table border=0 cellspacing=0 cellpadding=0 style=\"width:640px; background: #D7D7D7 url(http://cdn.fupa.com/images/fb_bg.png);\"><tr><td><div style=\"float:left;\"><a href=\"http://www.fupa.com/\" target=_blank><img src=\"http://cdn.fupa.com/images/fb_logo.png\" border=0></a></div><div style=\"float:right;\"><a href=\"http://www.fupa.com/share.aspx?g=kids-games-what-do-they-eat\"><img src=\"http://cdn.fupa.com/images/fb_share.png\" border=0></a></div><div style=\"float:right;\"><a href=\"http://www.fupa.com/embed/?g=kids-games-what-do-they-eat\"><img src=\"http://cdn.fupa.com/images/fb_embed.png\" border=0></a></div><div style=\"float:right;\"><a href=\"http://www.fupa.com/nextgame.aspx?g=kids-games-what-do-they-eat\"><img src=\"http://cdn.fupa.com/images/fb_next.png\" border=0></a></div></td></tr></table>",
@@ -218,6 +225,7 @@
             ],
             "name": "King of Shapes",
             "screenShot": "static/content/thumbnails/KingofShapes.jpg",
+            "audio" : "static/content/sounds/kingshapes.wav",
             "sex": "N/A",
             "content_type": "Game",
             "embedCode": "<object width=\"640\" height=\"480\"><param name=\"movie\" value=\"http://www.fupa.com/swf/King-of-Shapes/kingofshapes.swf\"></param><embed src=\"http://www.fupa.com/swf/King-of-Shapes/kingofshapes.swf\" type=\"application/x-shockwave-flash\" width=\"640\" height=\"480\"></embed></object><br/>Find more <a href=\"http://www.fupa.com/\">free online flash games</a> at Fupa.com",
@@ -233,6 +241,7 @@
             ],
             "name": "Colour the Parrot",
             "screenShot": "static/content/thumbnails/ColourParrot.png",
+            "audio" : "static/content/sounds/colourparrot.wav",
             "sex": "N/A",
             "content_type": "Game",
             "embedCode": "<object width=\"500\" height=\"400\"><param name=\"movie\" value=\"http://www.fupa.com/swf/parrot-game/papagal.swf\"></param><embed src=\"http://www.fupa.com/swf/parrot-game/papagal.swf\" type=\"application/x-shockwave-flash\" width=\"500\" height=\"400\"></embed></object><br/>Find more <a href=\"http://www.fupa.com/\">free online flash games</a> at Fupa.com",
@@ -248,6 +257,7 @@
             ],
             "name": "Crazy Taxi",
             "screenShot": "static/content/thumbnails/CrazyTaxi.gif",
+            "audio" : "static/content/sounds/crazytaxi.wav",
             "sex": "Male",
             "content_type": "Game",
             "embedCode": "<object width=\"600\" height=\"400\"><param name=\"movie\" value=\"http://www.fupa.com/swf/crazy-taxi/crazytaxi.swf\"></param><embed src=\"http://www.fupa.com/swf/crazy-taxi/crazytaxi.swf\" type=\"application/x-shockwave-flash\" width=\"600\" height=\"400\"></embed></object><br/>Find more <a href=\"http://www.fupa.com/\">free online flash games</a> at Fupa.com",
@@ -263,6 +273,7 @@
             ],
             "name": "Football Game",
             "screenShot": "static/content/thumbnails/FootballGame.jpg",
+            "audio" : "static/content/sounds/footballgame.wav",
             "sex": "Male",
             "content_type": "Game",
             "embedCode": "<object width=\"640\" height=\"480\"><param name=\"movie\" value=\"http://www.fupa.com/swf/Goal_-South-Africa/goalsouthafrica.swf\"></param><embed src=\"http://www.fupa.com/swf/Goal_-South-Africa/goalsouthafrica.swf\" type=\"application/x-shockwave-flash\" width=\"640\" height=\"480\"></embed></object><br/>Find more <a href=\"http://www.fupa.com/\">free online flash games</a> at Fupa.com",
@@ -278,7 +289,8 @@
                 6
             ],
             "name": "Colour Barbie",
-            "screenShot": "",
+            "screenShot": "static/content/thumbnails/barbie.jpg",
+            "audio" : "static/content/sounds/colourbarbie.wav",
             "sex": "Female",
             "content_type": "Game",
             "embedCode": "<object width=\"500\" height=\"750\"><param name=\"movie\" value=\"http://www.fupa.com/swf/barbie-coloring-book/Barbie_Coloring.swf\"></param><embed src=\"http://www.fupa.com/swf/barbie-coloring-book/Barbie_Coloring.swf\" type=\"application/x-shockwave-flash\" width=\"500\" height=\"750\"></embed></object><br/>Find more <a href=\"http://www.fupa.com/\">free online flash games</a> at Fupa.com",
@@ -294,6 +306,7 @@
             ],
             "name": "Animal Shelter",
             "screenShot": "static/content/thumbnails/AnimalShelter.jpg",
+            "audio" : "static/content/sounds/animalshelter.wav",
             "sex": "N/A",
             "content_type": "Game",
             "embedCode": "<object width=\"700\" height=\"550\"><param name=\"movie\" value=\"http://www.fupa.com/swf/Animal-Shelter/animalshelter.swf\"></param><embed src=\"http://www.fupa.com/swf/Animal-Shelter/animalshelter.swf\" type=\"application/x-shockwave-flash\" width=\"700\" height=\"550\"></embed></object><br/>Find more <a href=\"http://www.fupa.com/\">free online flash games</a> at Fupa.com",
@@ -309,6 +322,7 @@
             ],
             "name": "Count the Strawberries",
             "screenShot": "static/content/thumbnails/Strawberries.jpg",
+            "audio" : "static/content/sounds/strawberries.wav",
             "sex": "N/A",
             "content_type": "Game",
             "embedCode": "<object width=\"550\" height=\"400\"><param name=\"movie\" value=\"http://www.fupa.com/swf/collect-the-strawberries_-part-1_/klu?_plus_550x400.swf\"></param><embed src=\"http://www.fupa.com/swf/collect-the-strawberries_-part-1_/klu?_plus_550x400.swf\" type=\"application/x-shockwave-flash\" width=\"550\" height=\"400\"></embed></object><br/>Find more <a href=\"http://www.fupa.com/\">free online flash games</a> at Fupa.com",
@@ -324,6 +338,7 @@
             ],
             "name": "TruckMania",
             "screenShot": "static/content/thumbnails/TruckMania.jpg",
+            "audio" : "static/content/sounds/truckmania.wav",
             "sex": "Male",
             "content_type": "Game",
             "embedCode": "<object width=\"640\" height=\"480\"><param name=\"movie\" value=\"http://www.fupa.com/swf/Truck-Mania/truckmania.playhub.com.swf\"></param><embed src=\"http://www.fupa.com/swf/Truck-Mania/truckmania.playhub.com.swf\" type=\"application/x-shockwave-flash\" width=\"640\" height=\"480\"></embed></object><br/>Find more <a href=\"http://www.fupa.com/\">free online flash games</a> at Fupa.com",
@@ -340,6 +355,7 @@
             ],
             "name": "Animal Sports Games",
             "screenShot": "static/content/thumbnails/AnimalSports.jpg",
+            "audio" : "static/content/sounds/animalsports.wav",
             "sex": "N/A",
             "content_type": "Game",
             "embedCode": "<object width=\"550\" height=\"400\"><param name=\"movie\" value=\"http://www.fupa.com/swf/chicken-chuck/chicken_chuck.swf\"></param><embed src=\"http://www.fupa.com/swf/chicken-chuck/chicken_chuck.swf\" type=\"application/x-shockwave-flash\" width=\"550\" height=\"400\"></embed></object><br/>Find more <a href=\"http://www.fupa.com/\">free online flash games</a> at Fupa.com",
@@ -355,6 +371,7 @@
             ],
             "name": "Monster Truck Vs Forest",
             "screenShot": "static/content/thumbnails/monster_trucks.jpg",
+            "audio" : "static/content/sounds/monstertruck.wav",
             "sex": "N/A",
             "content_type": "Game",
             "embedCode": "<object width=\"700\" height=\"525\"><param name=\"movie\" value=\"http://www8.agame.com/games/flash/m/monster_truck_vs_forest/monster_truck_vs_forest.swf\"></param><embed src=\"http://www8.agame.com/games/flash/m/monster_truck_vs_forest/monster_truck_vs_forest.swf\" type=\"application/x-shockwave-flash\" width=\"700\" height=\"525\"></embed></object>",
@@ -370,6 +387,7 @@
             ],
             "name": "Gold Ahoy",
             "screenShot": "static/content/thumbnails/goldAhoy.jpg",
+            "audio" : "static/content/sounds/goldahoy.wav",
             "sex": "Male",
             "content_type": "Game",
             "embedCode": "<object width=\"700\" height=\"525\"><param name=\"movie\" value=\"http://www8.agame.com/mirror/flash/g/Gold_Ahoy_SPIL.swf\"></param><embed src=\"http://www8.agame.com/mirror/flash/g/Gold_Ahoy_SPIL.swf\" type=\"application/x-shockwave-flash\" width=\"700\" height=\"525\"></embed></object>",
@@ -385,6 +403,7 @@
             ],
             "name": "Fairy Princess Dress Up",
             "screenShot": "static/content/thumbnails/153714.gif",
+            "audio" : "static/content/sounds/fairydressup.wav",
             "sex": "Female",
             "content_type": "Game",
             "embedCode": "<object width=\"700\" height=\"525\"><param name=\"movie\" value=\"http://www8.agame.com/mirror/flash/f/Fairy%20Princess%20Dress%20Up.swf\"></param><embed src=\"http://www8.agame.com/mirror/flash/f/Fairy%20Princess%20Dress%20Up.swf\" type=\"application/x-shockwave-flash\" width=\"700\" height=\"525\"></embed></object>",
@@ -400,6 +419,7 @@
             ],
             "name": "One Direction in Concert Make over",
             "screenShot": "static/content/thumbnails/oneDirection.gif",
+            "audio" : "static/content/sounds/onedirection.wav",
             "sex": "Female",
             "content_type": "Game",
             "embedCode": "<object width=\"700\" height=\"525\"><param name=\"movie\" value=\"http://www8.agame.com/mirror/flash/o/One_Direction_In_Concert_Makeover.swf\"></param><embed src=\"http://www8.agame.com/mirror/flash/o/One_Direction_In_Concert_Makeover.swf\" type=\"application/x-shockwave-flash\" width=\"700\" height=\"525\"></embed></object>",
@@ -415,6 +435,7 @@
             ],
             "name": "Pet monster creation",
             "screenShot": "static/content/thumbnails/petMonsterCreator.jpg",
+            "audio" : "static/content/sounds/petmonster.wav",
             "sex": "N/A",
             "content_type": "Game",
             "embedCode": "<object width=\"700\" height=\"525\"><param name=\"movie\" value=\"http://www8.agame.com/mirror/flash/c/CreatureMaker/pmc-5dinosaurs_Spill_CS3.swf\"></param><embed src=\"http://www8.agame.com/mirror/flash/c/CreatureMaker/pmc-5dinosaurs_Spill_CS3.swf\" type=\"application/x-shockwave-flash\" width=\"700\" height=\"525\"></embed></object>",
@@ -430,6 +451,7 @@
             ],
             "name": "Animal Adoption Center",
             "screenShot": "static/content/thumbnails/AnimalAdoptionCentre.jpg",
+            "audio" : "static/content/sounds/animaladoption.wav",
             "sex": "N/A",
             "content_type": "Game",
             "embedCode": "<object width=\"700\" height=\"525\"><param name=\"movie\" value=\"http://www8.agame.com/mirror/flash/a/Animal_adoption_center/Animal_Adoption_Center.swf\"></param><embed src=\"http://www8.agame.com/mirror/flash/a/Animal_adoption_center/Animal_Adoption_Center.swf\" type=\"application/x-shockwave-flash\" width=\"700\" height=\"525\"></embed></object>",
@@ -446,6 +468,7 @@
             ],
             "name": "Three Little Pigs",
             "screenShot": "static/content/thumbnails/Three_little_pigs.jpg",
+            "audio" : "static/content/sounds/threepigs.wav",
             "sex": "N/A",
             "content_type": "Video",
             "embedCode": "<iframe width=\"560\" height=\"315\" src=\"http://www.youtube-nocookie.com/embed/G5hI9U19-m0?list=PLEDC8E943487BB3B7\" frameborder=\"0\" allowfullscreen></iframe>",
@@ -462,6 +485,7 @@
             ],
             "name": "Three Billy Goats Gruff",
             "screenShot": "static/content/thumbnails/billy_goats_gruff.jpg",
+            "audio" : "static/content/sounds/threebillygoats.wav",
             "sex": "N/A",
             "content_type": "Video",
             "embedCode": "<iframe width=\"560\" height=\"315\" src=\"http://www.youtube.com/embed/NQ-eZ9I23Z4\" frameborder=\"0\" allowfullscreen></iframe>",
@@ -478,6 +502,7 @@
             ],
             "name": "Old MacDonald had a Farm",
             "screenShot": "static/content/thumbnails/old_ac.jpg",
+            "audio" : "static/content/sounds/oldmacdonald.wav",
             "sex": "N/A",
             "content_type": "Video",
             "embedCode": "<iframe width=\"560\" height=\"315\" src=\"http://www.youtube.com/embed/hDt_MhIKpLM\" frameborder=\"0\" allowfullscreen></iframe>",
@@ -493,6 +518,7 @@
             ],
             "name": "Twinkle Twinkle",
             "screenShot": "static/content/thumbnails/twinkleTwinkle.jpg",
+            "audio" : "static/content/sounds/twinkletwinkle.wav",
             "sex": "No preference",
             "content_type": "Video",
             "embedCode": "<iframe width=\"560\" height=\"315\" src=\"http://www.youtube.com/embed/wLN0og245YI\" frameborder=\"0\" allowfullscreen></iframe>",
@@ -503,60 +529,45 @@
         "pk": 1,
         "model": "letsplay.avatar",
         "fields": {
-            "category": 3,
             "name": "Heart Face",
             "screenShot": "static/avatar/thumbnails/HeartFace.jpg",
-            "sex": "N/A",
-            "embedCode": "<img style=\"visibility:hidden;width:0px;height:0px;\" border=0 width=0 height=0 src=\"http://c.gigcount.com/wildfire/IMP/CXNID=2000002.0NXC/bT*xJmx*PTEzNjIzMjA*OTk1MzImcHQ9MTM2MjMyMDUwMzQ4NyZwPTk3NTA3MiZkPTAwMCUyMC*lMjBWb2tpJTIwV2lkZ2V*Jmc9/MSZvPWNiZDIzZGQxNjk*MTRiMjBiNzE3ZjIxYzk1NTRiMzU*Jm9mPTA=.gif\" /><object height=\"133\" width=\"100\" classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\"codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0\" id=\"widget_name\"><param name=\"movie\" value=\"http://vhss-d.oddcast.com/vhss_editors/voki_player.swf?doc=http://vhss-d.oddcast.com/php/vhss_editors/getvoki/chsm=fface4f6738088614551b3e5d2003e15%26sc=7660315\" /><param name=\"quality\" value=\"high\" /><param name=\"allowScriptAccess\" value=\"always\" /><param name=\"width\" value=\"100\" /><param name=\"height\" value=\"133\" /><param name=\"allowNetworking\" value=\"all\"/><param name=\"wmode\" value=\"transparent\" /><param name=\"allowFullScreen\" value=\"true\" /><embed height=\"133\" width=\"100\" src=\"http://vhss-d.oddcast.com/vhss_editors/voki_player.swf?doc=http%3A%2F%2Fvhss-d.oddcast.com%2Fphp%2Fvhss_editors%2Fgetvoki%2Fchsm=fface4f6738088614551b3e5d2003e15%26sc=7660315\" quality=\"high\" allowScriptAccess=\"always\" allowNetworking=\"all\" wmode=\"transparent\" allowFullScreen=\"true\" pluginspage=\"http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash\" type=\"application/x-shockwave-flash\" name=\"widget_name\"></object>",
-            "ageGroup": 3
+            "embedCode": "<img style=\"visibility:hidden;width:0px;height:0px;\" border=0 width=0 height=0 src=\"http://c.gigcount.com/wildfire/IMP/CXNID=2000002.0NXC/bT*xJmx*PTEzNjIzMjA*OTk1MzImcHQ9MTM2MjMyMDUwMzQ4NyZwPTk3NTA3MiZkPTAwMCUyMC*lMjBWb2tpJTIwV2lkZ2V*Jmc9/MSZvPWNiZDIzZGQxNjk*MTRiMjBiNzE3ZjIxYzk1NTRiMzU*Jm9mPTA=.gif\" /><object height=\"133\" width=\"100\" classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\"codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0\" id=\"widget_name\"><param name=\"movie\" value=\"http://vhss-d.oddcast.com/vhss_editors/voki_player.swf?doc=http://vhss-d.oddcast.com/php/vhss_editors/getvoki/chsm=fface4f6738088614551b3e5d2003e15%26sc=7660315\" /><param name=\"quality\" value=\"high\" /><param name=\"allowScriptAccess\" value=\"always\" /><param name=\"width\" value=\"100\" /><param name=\"height\" value=\"133\" /><param name=\"allowNetworking\" value=\"all\"/><param name=\"wmode\" value=\"transparent\" /><param name=\"allowFullScreen\" value=\"true\" /><embed height=\"133\" width=\"100\" src=\"http://vhss-d.oddcast.com/vhss_editors/voki_player.swf?doc=http%3A%2F%2Fvhss-d.oddcast.com%2Fphp%2Fvhss_editors%2Fgetvoki%2Fchsm=fface4f6738088614551b3e5d2003e15%26sc=7660315\" quality=\"high\" allowScriptAccess=\"always\" allowNetworking=\"all\" wmode=\"transparent\" allowFullScreen=\"true\" pluginspage=\"http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash\" type=\"application/x-shockwave-flash\" name=\"widget_name\"></object>"
         }
     },
     {
         "pk": 2,
         "model": "letsplay.avatar",
         "fields": {
-            "category": 1,
             "name": "Cat",
             "screenShot": "static/avatar/thumbnails/catAvatar.jpg",
-            "sex": "N/A",
-            "embedCode": "<img style=\"visibility:hidden;width:0px;height:0px;\" border=0 width=0 height=0 src=\"http://c.gigcount.com/wildfire/IMP/CXNID=2000002.0NXC/bT*xJmx*PTEzNjIzMjA3NTMzNzQmcHQ9MTM2MjMyMDc1NjU2NyZwPTk3NTA3MiZkPTAwMCUyMC*lMjBWb2tpJTIwV2lkZ2V*Jmc9/MSZvPWNiZDIzZGQxNjk*MTRiMjBiNzE3ZjIxYzk1NTRiMzU*Jm9mPTA=.gif\" /><object height=\"133\" width=\"100\" classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\"codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0\" id=\"widget_name\"><param name=\"movie\" value=\"http://vhss-d.oddcast.com/vhss_editors/voki_player.swf?doc=http://vhss-d.oddcast.com/php/vhss_editors/getvoki/chsm=a46be6f6c68a473e0c67c2c030425a02%26sc=7561125\" /><param name=\"quality\" value=\"high\" /><param name=\"allowScriptAccess\" value=\"always\" /><param name=\"width\" value=\"100\" /><param name=\"height\" value=\"133\" /><param name=\"allowNetworking\" value=\"all\"/><param name=\"wmode\" value=\"transparent\" /><param name=\"allowFullScreen\" value=\"true\" /><embed height=\"133\" width=\"100\" src=\"http://vhss-d.oddcast.com/vhss_editors/voki_player.swf?doc=http%3A%2F%2Fvhss-d.oddcast.com%2Fphp%2Fvhss_editors%2Fgetvoki%2Fchsm=a46be6f6c68a473e0c67c2c030425a02%26sc=7561125\" quality=\"high\" allowScriptAccess=\"always\" allowNetworking=\"all\" wmode=\"transparent\" allowFullScreen=\"true\" pluginspage=\"http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash\" type=\"application/x-shockwave-flash\" name=\"widget_name\"></object>",
-            "ageGroup": 4
+            "embedCode": "<img style=\"visibility:hidden;width:0px;height:0px;\" border=0 width=0 height=0 src=\"http://c.gigcount.com/wildfire/IMP/CXNID=2000002.0NXC/bT*xJmx*PTEzNjIzMjA3NTMzNzQmcHQ9MTM2MjMyMDc1NjU2NyZwPTk3NTA3MiZkPTAwMCUyMC*lMjBWb2tpJTIwV2lkZ2V*Jmc9/MSZvPWNiZDIzZGQxNjk*MTRiMjBiNzE3ZjIxYzk1NTRiMzU*Jm9mPTA=.gif\" /><object height=\"133\" width=\"100\" classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\"codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0\" id=\"widget_name\"><param name=\"movie\" value=\"http://vhss-d.oddcast.com/vhss_editors/voki_player.swf?doc=http://vhss-d.oddcast.com/php/vhss_editors/getvoki/chsm=a46be6f6c68a473e0c67c2c030425a02%26sc=7561125\" /><param name=\"quality\" value=\"high\" /><param name=\"allowScriptAccess\" value=\"always\" /><param name=\"width\" value=\"100\" /><param name=\"height\" value=\"133\" /><param name=\"allowNetworking\" value=\"all\"/><param name=\"wmode\" value=\"transparent\" /><param name=\"allowFullScreen\" value=\"true\" /><embed height=\"133\" width=\"100\" src=\"http://vhss-d.oddcast.com/vhss_editors/voki_player.swf?doc=http%3A%2F%2Fvhss-d.oddcast.com%2Fphp%2Fvhss_editors%2Fgetvoki%2Fchsm=a46be6f6c68a473e0c67c2c030425a02%26sc=7561125\" quality=\"high\" allowScriptAccess=\"always\" allowNetworking=\"all\" wmode=\"transparent\" allowFullScreen=\"true\" pluginspage=\"http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash\" type=\"application/x-shockwave-flash\" name=\"widget_name\"></object>"
         }
     },
     {
         "pk": 3,
         "model": "letsplay.avatar",
         "fields": {
-            "category": 3,
             "name": "Friendly Monster",
             "screenShot": "static/avatar/thumbnails/friendlymonster.jpg",
-            "sex": "N/A",
-            "embedCode": "<img style=\"visibility:hidden;width:0px;height:0px;\" border=0 width=0 height=0 src=\"http://c.gigcount.com/wildfire/IMP/CXNID=2000002.0NXC/bT*xJmx*PTEzNjIzMjA4ODc4MDImcHQ9MTM2MjMyMDg5MTQ*NSZwPTk3NTA3MiZkPTAwMCUyMC*lMjBWb2tpJTIwV2lkZ2V*Jmc9/MSZvPWNiZDIzZGQxNjk*MTRiMjBiNzE3ZjIxYzk1NTRiMzU*Jm9mPTA=.gif\" /><object height=\"133\" width=\"100\" classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\"codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0\" id=\"widget_name\"><param name=\"movie\" value=\"http://vhss-d.oddcast.com/vhss_editors/voki_player.swf?doc=http://vhss-d.oddcast.com/php/vhss_editors/getvoki/chsm=b47bd9ce48d19367a02655796cf18b46%26sc=7561105\" /><param name=\"quality\" value=\"high\" /><param name=\"allowScriptAccess\" value=\"always\" /><param name=\"width\" value=\"100\" /><param name=\"height\" value=\"133\" /><param name=\"allowNetworking\" value=\"all\"/><param name=\"wmode\" value=\"transparent\" /><param name=\"allowFullScreen\" value=\"true\" /><embed height=\"133\" width=\"100\" src=\"http://vhss-d.oddcast.com/vhss_editors/voki_player.swf?doc=http%3A%2F%2Fvhss-d.oddcast.com%2Fphp%2Fvhss_editors%2Fgetvoki%2Fchsm=b47bd9ce48d19367a02655796cf18b46%26sc=7561105\" quality=\"high\" allowScriptAccess=\"always\" allowNetworking=\"all\" wmode=\"transparent\" allowFullScreen=\"true\" pluginspage=\"http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash\" type=\"application/x-shockwave-flash\" name=\"widget_name\"></object>",
-            "ageGroup": 3
+            "embedCode": "<img style=\"visibility:hidden;width:0px;height:0px;\" border=0 width=0 height=0 src=\"http://c.gigcount.com/wildfire/IMP/CXNID=2000002.0NXC/bT*xJmx*PTEzNjIzMjA4ODc4MDImcHQ9MTM2MjMyMDg5MTQ*NSZwPTk3NTA3MiZkPTAwMCUyMC*lMjBWb2tpJTIwV2lkZ2V*Jmc9/MSZvPWNiZDIzZGQxNjk*MTRiMjBiNzE3ZjIxYzk1NTRiMzU*Jm9mPTA=.gif\" /><object height=\"133\" width=\"100\" classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\"codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0\" id=\"widget_name\"><param name=\"movie\" value=\"http://vhss-d.oddcast.com/vhss_editors/voki_player.swf?doc=http://vhss-d.oddcast.com/php/vhss_editors/getvoki/chsm=b47bd9ce48d19367a02655796cf18b46%26sc=7561105\" /><param name=\"quality\" value=\"high\" /><param name=\"allowScriptAccess\" value=\"always\" /><param name=\"width\" value=\"100\" /><param name=\"height\" value=\"133\" /><param name=\"allowNetworking\" value=\"all\"/><param name=\"wmode\" value=\"transparent\" /><param name=\"allowFullScreen\" value=\"true\" /><embed height=\"133\" width=\"100\" src=\"http://vhss-d.oddcast.com/vhss_editors/voki_player.swf?doc=http%3A%2F%2Fvhss-d.oddcast.com%2Fphp%2Fvhss_editors%2Fgetvoki%2Fchsm=b47bd9ce48d19367a02655796cf18b46%26sc=7561105\" quality=\"high\" allowScriptAccess=\"always\" allowNetworking=\"all\" wmode=\"transparent\" allowFullScreen=\"true\" pluginspage=\"http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash\" type=\"application/x-shockwave-flash\" name=\"widget_name\"></object>"
         }
     },
     {
         "pk": 4,
         "model": "letsplay.avatar",
         "fields": {
-            "category": 1,
             "name": "Dog",
             "screenShot": "static/avatar/thumbnails/dog.jpg",
-            "sex": "N/A",
-            "embedCode": "<img style=\"visibility:hidden;width:0px;height:0px;\" border=0 width=0 height=0 src=\"http://c.gigcount.com/wildfire/IMP/CXNID=2000002.0NXC/bT*xJmx*PTEzNjIzMjE1NDU*NDMmcHQ9MTM2MjMyMTU1Mjc4OCZwPTk3NTA3MiZkPTAwMCUyMC*lMjBWb2tpJTIwV2lkZ2V*Jmc9/MSZvPWNiZDIzZGQxNjk*MTRiMjBiNzE3ZjIxYzk1NTRiMzU*Jm9mPTA=.gif\" /><object height=\"133\" width=\"100\" classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\"codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0\" id=\"widget_name\"><param name=\"movie\" value=\"http://vhss-d.oddcast.com/vhss_editors/voki_player.swf?doc=http://vhss-d.oddcast.com/php/vhss_editors/getvoki/chsm=2a211a68681adc23dd3e9b5a4d3a49da%26sc=7660344\" /><param name=\"quality\" value=\"high\" /><param name=\"allowScriptAccess\" value=\"always\" /><param name=\"width\" value=\"100\" /><param name=\"height\" value=\"133\" /><param name=\"allowNetworking\" value=\"all\"/><param name=\"wmode\" value=\"transparent\" /><param name=\"allowFullScreen\" value=\"true\" /><embed height=\"133\" width=\"100\" src=\"http://vhss-d.oddcast.com/vhss_editors/voki_player.swf?doc=http%3A%2F%2Fvhss-d.oddcast.com%2Fphp%2Fvhss_editors%2Fgetvoki%2Fchsm=2a211a68681adc23dd3e9b5a4d3a49da%26sc=7660344\" quality=\"high\" allowScriptAccess=\"always\" allowNetworking=\"all\" wmode=\"transparent\" allowFullScreen=\"true\" pluginspage=\"http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash\" type=\"application/x-shockwave-flash\" name=\"widget_name\"></object>",
-            "ageGroup": 1
+            "embedCode": "<img style=\"visibility:hidden;width:0px;height:0px;\" border=0 width=0 height=0 src=\"http://c.gigcount.com/wildfire/IMP/CXNID=2000002.0NXC/bT*xJmx*PTEzNjIzMjE1NDU*NDMmcHQ9MTM2MjMyMTU1Mjc4OCZwPTk3NTA3MiZkPTAwMCUyMC*lMjBWb2tpJTIwV2lkZ2V*Jmc9/MSZvPWNiZDIzZGQxNjk*MTRiMjBiNzE3ZjIxYzk1NTRiMzU*Jm9mPTA=.gif\" /><object height=\"133\" width=\"100\" classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\"codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0\" id=\"widget_name\"><param name=\"movie\" value=\"http://vhss-d.oddcast.com/vhss_editors/voki_player.swf?doc=http://vhss-d.oddcast.com/php/vhss_editors/getvoki/chsm=2a211a68681adc23dd3e9b5a4d3a49da%26sc=7660344\" /><param name=\"quality\" value=\"high\" /><param name=\"allowScriptAccess\" value=\"always\" /><param name=\"width\" value=\"100\" /><param name=\"height\" value=\"133\" /><param name=\"allowNetworking\" value=\"all\"/><param name=\"wmode\" value=\"transparent\" /><param name=\"allowFullScreen\" value=\"true\" /><embed height=\"133\" width=\"100\" src=\"http://vhss-d.oddcast.com/vhss_editors/voki_player.swf?doc=http%3A%2F%2Fvhss-d.oddcast.com%2Fphp%2Fvhss_editors%2Fgetvoki%2Fchsm=2a211a68681adc23dd3e9b5a4d3a49da%26sc=7660344\" quality=\"high\" allowScriptAccess=\"always\" allowNetworking=\"all\" wmode=\"transparent\" allowFullScreen=\"true\" pluginspage=\"http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash\" type=\"application/x-shockwave-flash\" name=\"widget_name\"></object>"
         }
     },
     {
         "pk": 5,
         "model": "letsplay.avatar",
         "fields": {
-            "category": 1,
             "name": "Girl Cat",
             "screenShot": "static/avatar/thumbnails/GirlCat.jpg",
-            "sex": "Female",
-            "embedCode": "<img style=\"visibility:hidden;width:0px;height:0px;\" border=0 width=0 height=0 src=\"http://c.gigcount.com/wildfire/IMP/CXNID=2000002.0NXC/bT*xJmx*PTEzNjIzMjIxNzQ5ODMmcHQ9MTM2MjMyMjE3OTAwMyZwPTk3NTA3MiZkPTAwMCUyMC*lMjBWb2tpJTIwV2lkZ2V*Jmc9/MSZvPWNiZDIzZGQxNjk*MTRiMjBiNzE3ZjIxYzk1NTRiMzU*Jm9mPTA=.gif\" /><object height=\"133\" width=\"100\" classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\"codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0\" id=\"widget_name\"><param name=\"movie\" value=\"http://vhss-d.oddcast.com/vhss_editors/voki_player.swf?doc=http://vhss-d.oddcast.com/php/vhss_editors/getvoki/chsm=d2a8f0ffa1c757ac39208349521bbb3e%26sc=7660368\" /><param name=\"quality\" value=\"high\" /><param name=\"allowScriptAccess\" value=\"always\" /><param name=\"width\" value=\"100\" /><param name=\"height\" value=\"133\" /><param name=\"allowNetworking\" value=\"all\"/><param name=\"wmode\" value=\"transparent\" /><param name=\"allowFullScreen\" value=\"true\" /><embed height=\"133\" width=\"100\" src=\"http://vhss-d.oddcast.com/vhss_editors/voki_player.swf?doc=http%3A%2F%2Fvhss-d.oddcast.com%2Fphp%2Fvhss_editors%2Fgetvoki%2Fchsm=d2a8f0ffa1c757ac39208349521bbb3e%26sc=7660368\" quality=\"high\" allowScriptAccess=\"always\" allowNetworking=\"all\" wmode=\"transparent\" allowFullScreen=\"true\" pluginspage=\"http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash\" type=\"application/x-shockwave-flash\" name=\"widget_name\"></object>",
-            "ageGroup": 2
+            "embedCode": "<img style=\"visibility:hidden;width:0px;height:0px;\" border=0 width=0 height=0 src=\"http://c.gigcount.com/wildfire/IMP/CXNID=2000002.0NXC/bT*xJmx*PTEzNjIzMjIxNzQ5ODMmcHQ9MTM2MjMyMjE3OTAwMyZwPTk3NTA3MiZkPTAwMCUyMC*lMjBWb2tpJTIwV2lkZ2V*Jmc9/MSZvPWNiZDIzZGQxNjk*MTRiMjBiNzE3ZjIxYzk1NTRiMzU*Jm9mPTA=.gif\" /><object height=\"133\" width=\"100\" classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\"codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0\" id=\"widget_name\"><param name=\"movie\" value=\"http://vhss-d.oddcast.com/vhss_editors/voki_player.swf?doc=http://vhss-d.oddcast.com/php/vhss_editors/getvoki/chsm=d2a8f0ffa1c757ac39208349521bbb3e%26sc=7660368\" /><param name=\"quality\" value=\"high\" /><param name=\"allowScriptAccess\" value=\"always\" /><param name=\"width\" value=\"100\" /><param name=\"height\" value=\"133\" /><param name=\"allowNetworking\" value=\"all\"/><param name=\"wmode\" value=\"transparent\" /><param name=\"allowFullScreen\" value=\"true\" /><embed height=\"133\" width=\"100\" src=\"http://vhss-d.oddcast.com/vhss_editors/voki_player.swf?doc=http%3A%2F%2Fvhss-d.oddcast.com%2Fphp%2Fvhss_editors%2Fgetvoki%2Fchsm=d2a8f0ffa1c757ac39208349521bbb3e%26sc=7660368\" quality=\"high\" allowScriptAccess=\"always\" allowNetworking=\"all\" wmode=\"transparent\" allowFullScreen=\"true\" pluginspage=\"http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash\" type=\"application/x-shockwave-flash\" name=\"widget_name\"></object>"
         }
     }
 ]
