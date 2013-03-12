@@ -51,14 +51,14 @@
 			<ul class="thumbnails">
 			{% for game in games %}
 				<li class="span2">
-					<a href="#myModalGame" role="button" data-toggle="modal"class="thumbnail">
+					<a href="#game{{ forloop.counter }}" role="button" data-toggle="modal"class="thumbnail">
 						<img src="/{{ game.screenShot }}" alt="" />
 					</a>
 					<input type="checkbox" value="{{ game.id }}" name="choices" />
 					<h6>{{ game.name }}</h6>
 				</li>
 			<!-- Modal -->
-			<div id="myModalGame" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div id="game{{ forloop.counter }}" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			  <div class="modal-header">
 			    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 			    <h3 id="myModalLabel">{{ game.name }}</h3>
@@ -79,25 +79,25 @@
 				<ul class="thumbnails">
 					{% for video in videos %}
 					<li class="span2">
-						<a href="#myModalVid" role="button" data-toggle="modal" class="thumbnail">
+						<a href="#video{{ forloop.counter }}" role="button" data-toggle="modal" class="thumbnail">
 							<img src="/{{ video.screenShot }}" alt="" />
 						</a>
 						<input type="checkbox" value="{{ video.id }}" name="choices" />
 						<h6>{{ video.name }}</h6>
 					</li>
 					<!-- Modal -->
-<div id="myModalVid" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-    <h3 id="myModalLabel">{{ video.name }}</h3>
-  </div>
-  <div class="modal-body">
-    {{ video.embedCode|safe }}>
-  </div>
-  <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-  </div>
-</div>
+				<div id="video{{ forloop.counter }}" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				  <div class="modal-header">
+				    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				    <h3 id="myModalLabel">{{ video.name }}</h3>
+				  </div>
+				  <div class="modal-body">
+				    {{ video.embedCode|safe }}
+				  </div>
+				  <div class="modal-footer">
+				    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+				  </div>
+				</div>
 					{% endfor %}
 				</ul>
 			</div>

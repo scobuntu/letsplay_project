@@ -10,7 +10,7 @@ def index(request):
 	return render_to_response('index.html', {'form': form}, RequestContext(request))
 
 # Only allow a POST method to reach this page.
-@require_http_methods(["POST"])
+#@require_http_methods(["POST"])
 def customise(request):
 	name = request.POST['name']
 	request.session['name'] = name
@@ -48,7 +48,7 @@ def customise(request):
 	return render_to_response('customise.html', content_vars, RequestContext(request))
 
 # Only allow a POST method to reach this page.
-@require_http_methods(["POST"])
+#@require_http_methods(["POST"])
 def play(request):
 	
 	name = request.session['name']
