@@ -13,7 +13,7 @@
 				<ul class="thumbnails">
 					{% for avatar in avatars %}
 					<li class="span1">
-						<a href="#" class="thumbnail">
+						<a href="#" class="thumbnail-avatar">
 							<img src="/{{ avatar.screenShot}}" alt="{{ avatar.name }}" />
 						</a>
 						<input type="radio" name="avatar" value="{{ avatar.id }}">
@@ -25,21 +25,14 @@
 			<div class="pull-right span6" id="background">
 				<h3>Select a Background</h3>
 				<ul class="thumbnails">
+				{% for background in backgrounds %}
 					<li class="span2">
 						<a href="#" class="thumbnail">
-							<img data-src="holder/js/300x200" alt="" />
+							<img height="100px" src="/{{ background.screenShot }}" alt="{{ background.name }}" />
 						</a>
+						<input type="radio" name="background" value="{{ background.id }}">
 					</li>
-					<li class="span2">
-						<a href="#" class="thumbnail">
-							<img data-src="holder/js/300x200" alt="" />
-						</a>
-					</li>
-					<li class="span2">
-						<a href="#" class="thumbnail">
-							<img data-src="holder/js/300x200" alt="" />
-						</a>
-					</li>
+					{% endfor %}
 				</ul>
 			</div>
 			<!-- / background -->

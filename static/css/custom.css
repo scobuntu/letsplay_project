@@ -15,19 +15,24 @@ html {
 	background-color:rgba(255,255,255,0.9);
 	margin-top: 20px;
 	border: 2px solid rgb(243, 237, 255);
+	font-family:"Comic Sana MS",cursive,sans-serif
 }
 
 .container h1{
 	color: blue;
+	font-family:"Comic Sana MS",cursive,sans-serif
 }
 
 .container h3{
-	color: #dd3574
+	color: #dd3574;
+	font-family:"Comic Sana MS",cursive,sans-serif
 }
 
-.container h4{
-	color: 0077aa
+.container h6{
+	color: #0077aa;
+	font-family:"Comic Sana MS",cursive,sans-serif
 }
+
 
 .modal-body h2 {
 	color: #0000ff;
@@ -116,7 +121,6 @@ form input[type="radio"], input[type="checkbox"] {
 }
 
 .modal-body {
-	overflow-y: hidden;
   	max-height: auto;
   	padding: 15px;
 }
@@ -130,7 +134,8 @@ form input[type="radio"], input[type="checkbox"] {
  top:10%;
  left:50%;
  z-index:1050;
- width:650px;
+ width:auto;
+ height:auto;
  margin-left:-280px;
  background-color:#fff;
  border:1px solid #999;
@@ -148,6 +153,37 @@ form input[type="radio"], input[type="checkbox"] {
  background-clip:padding-box
  }
  
+ .modal-customise{
+ position:fixed;
+ top:10%;
+ left:50%;
+ z-index:1050;
+ width:590px;
+ margin-left:-280px;
+ background-color:#fff;
+ border:1px solid #999;
+ border:10px solid rgba(228,240,255,0.3);
+ *border:1px solid #999;
+ -webkit-border-radius:35px;
+ -moz-border-radius:35px;
+ border-radius:35px;
+ outline:0;
+ -webkit-box-shadow:0 3px 7px rgba(0,0,0,0.3);
+ -moz-box-shadow:0 3px 7px rgba(0,0,0,0.3);
+ box-shadow:0 3px 7px rgba(0,0,0,0.3);
+ -webkit-background-clip:padding-box;
+ -moz-background-clip:padding-box;
+ background-clip:padding-box
+ }
+ 
+  .modal-body{
+ position:relative;
+ max-height:400px;
+ padding:15px;
+ overflow-y: hidden;
+ overflow-x: hidden
+ }
+ 
  .well{
 	background-color: rgb(235, 230, 255)
  }
@@ -158,13 +194,6 @@ form input[type="radio"], input[type="checkbox"] {
  -moz-border-radius:36px 36px 0 0;
  border-radius:36px 36px 0 0;
  background-color: rgb(235, 230, 255)
- }
- 
- 
- .modal-body{position:relative;
- max-height:400px;
- padding:15px;
- overflow-y:auto;
  }
  
  .modal-footer{padding:14px 15px 15px;
@@ -192,11 +221,50 @@ form input[type="radio"], input[type="checkbox"] {
  -webkit-box-shadow:0 1px 3px rgba(0,0,0,0.055);
  -moz-box-shadow:0 1px 3px rgba(0,0,0,0.055);
  box-shadow:0 1px 3px rgba(0,0,0,0.055);
- -webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;
+ -webkit-transition:all .2s ease-in-out;
+ -moz-transition:all .2s ease-in-out;
  -o-transition:all .2s ease-in-out;
  transition:all .2s ease-in-out;
  height: 100px;
  width: 100px
+ }
+ 
+  .thumbnail-avatar{
+ display:block;
+ background:rgba(204,204,255,1);
+ padding:4px;
+ line-height:20px;
+ border:1px solid #ddd;
+ -webkit-border-radius:4px;
+ -moz-border-radius:4px;
+ border-radius:4px;
+ -webkit-box-shadow:0 1px 3px rgba(0,0,0,0.055);
+ -moz-box-shadow:0 1px 3px rgba(0,0,0,0.055);box-shadow:0 1px 3px rgba(0,0,0,0.055);
+ -webkit-transition:all .2s ease-in-out;
+ -moz-transition:all .2s ease-in-out;
+ -o-transition:all .2s ease-in-out;
+ transition:all .2s ease-in-out;
+ height: auto;
+ width: auto;
+ }
+ 
+   .thumbnail-kidsPage{
+ display:block;
+ background:rgba(204,204,255,1);
+ padding:4px;
+ line-height:20px;
+ border:1px solid #ddd;
+ -webkit-border-radius:4px;
+ -moz-border-radius:4px;
+ border-radius:4px;
+ -webkit-box-shadow:0 1px 3px rgba(0,0,0,0.055);
+ -moz-box-shadow:0 1px 3px rgba(0,0,0,0.055);box-shadow:0 1px 3px rgba(0,0,0,0.055);
+ -webkit-transition:all .2s ease-in-out;
+ -moz-transition:all .2s ease-in-out;
+ -o-transition:all .2s ease-in-out;
+ transition:all .2s ease-in-out;
+ height: 200px;
+ width: 200px;
  }
  
  a.thumbnail:hover{
