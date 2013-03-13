@@ -20,7 +20,7 @@
 			<ul class="thumbnails">
 			{% for game in games %}
 				<li class="span2">
-					<a href="#game{{ forloop.counter }}" role="button" data-toggle="modal"class="thumbnail">
+					<a onmouseover="mouseoversoundgame{{ forloop.counter }}.playclip()" href="#game{{ forloop.counter }}" role="button" data-toggle="modal"class="thumbnail">
 						<img src="/{{ game.screenShot }}" alt="" />
 					</a>
 					<h6>{{ game.name }}</h6>
@@ -44,7 +44,7 @@
 				<ul class="thumbnails">
 					{% for video in videos %}
 					<li class="span2">
-						<a href="#video{{ forloop.counter }}" role="button" data-toggle="modal" class="thumbnail">
+						<a onmouseover="mouseoversoundvideo{{ forloop.counter }}.playclip()" href="#video{{ forloop.counter }}" role="button" data-toggle="modal" class="thumbnail">
 							<img src="/{{ video.screenShot }}" alt="" />
 						</a>
 						<h6>{{ video.name }}</h6>

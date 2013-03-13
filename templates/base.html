@@ -39,7 +39,12 @@
     <script src="{{ STATIC_URL }}js/bootstrap.js"></script>
     <script src="{{ STATIC_URL }}js/audio.js"></script>
     <script>
-        var mouseoversound=createsoundbite("/static/content/sounds/catdressup.wav")
+        {% for game in games %}
+        var mouseoversoundgame{{ forloop.counter }}=createsoundbite('/{{ game.audio}}');
+        {% endfor %}
+        {% for video in videos %}
+          var mouseoversoundvideo{{ forloop.counter }}=createsoundbite('/{{ video.audio}}');
+        {% endfor %}
     </script>
 
 <script>
