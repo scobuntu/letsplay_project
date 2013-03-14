@@ -1,0 +1,12 @@
+				<h3>Select an Avatar</h3>
+				<ul class="thumbnails">
+					{% for avatar in avatars %}
+					<li class="span1">
+						<a href="#" class="thumbnail-avatar">
+							<img src="/{{ avatar.screenShot}}" alt="{{ avatar.name }}" />
+						</a>
+						<label for="choice-select">Select</label>
+						<input id="choice-select" type="radio" name="avatar" value="{{ avatar.id }}">
+					</li>
+					{% endfor %}	
+				</ul>

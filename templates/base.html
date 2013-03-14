@@ -9,8 +9,6 @@
     {% block css %}
     <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ STATIC_URL }}css/custom.css" rel="stylesheet">
-    {#% compress css %#}
-    {#% endcompress %#}
     {% endblock %}
 </head>
 
@@ -19,56 +17,17 @@
 {% else %}
 <body style="background: url('/static/img/main-bg.jpg')">
 {% endif %}
-<div class="navbar navbar-static-top">
-  <div class="navbar-inner">
-    <a class="brand" href="{% url index %}"><IMG SRC="{{ STATIC_URL}}img/letsplaylogo.png"></a>
-    <ul class="nav">
-      <li><a href="{% url index %}"><h3>Home</h3></a></li>
-        {% if pages %}
-            {% for page in pages %}
-                <li><a href="{{ page.get_absolute_url }}"><h3>{{ page.title }}</h3></a></li>
-            {% endfor %}
-        {% endif %}
-    </ul>
-  </div>
-</div>
+{% include "includes/navigation.html" %}
         {% block content %}
         {% endblock %}
-
-    {% block js %}
-    {#% compress js %#}
-    {#% endcompress %#}
-    <script src="{{ STATIC_URL}}js/jquery.js"></script>
-    <script src="{{ STATIC_URL }}js/main.js"></script>
-    <script src="{{ STATIC_URL }}js/bootstrap.js"></script>
-    <script src="{{ STATIC_URL }}js/audio.js"></script>
-    <script>
-        {% for game in games %}
-        var mouseoversoundgame{{ forloop.counter }}=createsoundbite('/{{ game.audio}}');
-        {% endfor %}
-        {% for video in videos %}
-          var mouseoversoundvideo{{ forloop.counter }}=createsoundbite('/{{ video.audio}}');
-        {% endfor %}
-    </script>
-
-<script>
-$(document).ready(function(){
-    setTimeout(function(){
-        $('#welcomeModal').modal('show');
-        $('#welcomeModal').fadeIn();
-    }, 700);
-});
-</script>
-<script>
-$(".checkboxes input:checkbox:first").change(function () {
-        $(".checkboxes").find(':checkbox').prop("checked", this.checked);
-    });
-</script>
-<style>
-.modal-backdrop, .modal-backdrop.fade.in {
-    opacity: 0.3;
-}
-</style>
+	{% block js %}
+	<script src="{{ STATIC_URL}}js/jquery.js"></script>
+	<script src="{{ STATIC_URL }}js/main.js"></script>
+	<script src="{{ STATIC_URL }}js/bootstrap.js"></script>
+	<script src="{{ STATIC_URL }}js/audio.js"></script>
+	<script src="{{ STATIC_URL }}js/utils.js"></script>
+    {% endblock %}
+    {% block extra %}
     {% endblock %}
 </body>
 </html>

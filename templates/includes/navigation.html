@@ -1,0 +1,13 @@
+<div class="navbar navbar-static-top">
+  <div class="navbar-inner">
+    <a class="brand" href="{% url index %}"><IMG SRC="{{ STATIC_URL}}img/letsplaylogo.png"></a>
+    <ul class="nav">
+      <li><a href="{% url index %}"><h3>Home</h3></a></li>
+        {% if pages %}
+            {% for page in pages %}
+                <li><a href="{{ page.get_absolute_url }}"><h3>{{ page.title }}</h3></a></li>
+            {% endfor %}
+        {% endif %}
+    </ul>
+  </div>
+</div>

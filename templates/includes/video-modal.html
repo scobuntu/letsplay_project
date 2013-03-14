@@ -1,0 +1,9 @@
+<div id="video{{ forloop.counter }}" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		<h6 id="myModalLabel">{{ game.name }}</h6>
+	</div>
+  <div class="modal-body">
+    {{ video.embedCode|safe }}>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+				<h3>Select a Background</h3>
+				<ul class="thumbnails">
+				{% for background in backgrounds %}
+					<li class="span2">
+						<a href="#" class="thumbnail">
+							<img src="/{{ background.screenShot }}" alt="{{ background.name }}" />
+						</a>
+						<input type="radio" name="background" value="{{ background.id }}">
+					</li>
+					{% endfor %}
+				</ul>

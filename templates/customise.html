@@ -8,94 +8,31 @@
 		<h1 id="customise-title">Customise a page for {{ name }}</h1>
 		<input id="create-btn" type="submit" class="btn btn-primary" value="Play">
 		<div class="row">
-			<div class="pull-left span5" id="avatar">
-				<h3>Select an Avatar</h3>
-				<ul class="thumbnails">
-					{% for avatar in avatars %}
-					<li class="span1">
-						<a href="#" class="thumbnail-avatar">
-							<img src="/{{ avatar.screenShot}}" alt="{{ avatar.name }}" />
-						</a>
-						<label for="choice-select">Select</label>
-						<input id="choice-select" type="radio" name="avatar" value="{{ avatar.id }}">
-					</li>
-					{% endfor %}	
-				</ul>
+			<div class="pull-left span5">
+				{% include "includes/avatar.html" %}
 			</div>
-			<!-- / avatar -->
-			<div class="pull-right span6" id="background">
-				<h3>Select a Background</h3>
-				<ul class="thumbnails">
-				{% for background in backgrounds %}
-					<li class="span2">
-						<a href="#" class="thumbnail">
-							<img src="/{{ background.screenShot }}" alt="{{ background.name }}" />
-						</a>
-						<input type="radio" name="background" value="{{ background.id }}">
-					</li>
-					{% endfor %}
-				</ul>
+			<div class="pull-right span6">
+				{% include "includes/background.html" %}
 			</div>
-			<!-- / background -->
 		</div>
 		<!-- / row -->
 		<div class="row">
-			<div class="pull-left span6" id="games">
+			<div class="pull-left span6">
 				<h3>Select Games</h3>
-			<ul class="thumbnails">
-			{% for game in games %}
-				<li class="span2">
-					<a href="#game{{ forloop.counter }}" role="button" data-toggle="modal"class="thumbnail">
-						<img src="/{{ game.screenShot }}" alt="" />
-					</a>
-					<input type="checkbox" value="{{ game.id }}" name="choices" />
-					<h6>{{ game.name }}</h6>
-				</li>
-			<!-- Modal -->
-			<div id="game{{ forloop.counter }}" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			  <div class="modal-header">
-			    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-			    <h3 id="myModalLabel">{{ game.name }}</h3>
-			  </div>
-			  <div class="modal-body">
-			    {{ game.embedCode|safe }}>
-			  </div>
-			  <div class="modal-footer">
-			    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-			  </div>
-			</div>
-			{% endfor %}
-			</ul>
-			</div>
-			<!-- / games -->
-			<div class="pull-left span6" id="videos">
-				<h3>Select Videos</h3>
 				<ul class="thumbnails">
-					{% for video in videos %}
-					<li class="span2">
-						<a href="#video{{ forloop.counter }}" role="button" data-toggle="modal" class="thumbnail">
-							<img src="/{{ video.screenShot }}" alt="" />
-						</a>
-						<input type="checkbox" value="{{ video.id }}" name="choices" />
-						<h6>{{ video.name }}</h6>
-					</li>
-					<!-- Modal -->
-				<div id="video{{ forloop.counter }}" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				  <div class="modal-header">
-				    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				    <h3 id="myModalLabel">{{ video.name }}</h3>
-				  </div>
-				  <div class="modal-body">
-				    {{ video.embedCode|safe }}
-				  </div>
-				  <div class="modal-footer">
-				    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-				  </div>
-				</div>
-					{% endfor %}
+				{% for game in games %}
+					{% include "includes/game.html" %}
+				{% endfor %}
 				</ul>
 			</div>
-			<!-- / videos -->
+			<div class="pull-left span6">
+				<h3>Select Videos</h3>
+				<ul class="thumbnails">
+				{% for video in videos %}
+					{% include "includes/video.html" %}
+				{% endfor %}
+				</ul>
+			</div>
 		</div>
 		<!-- / row -->
 		</form>

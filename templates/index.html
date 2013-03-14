@@ -48,4 +48,11 @@
   		  </div>
       </form>
       </div>
+      {% block extra %}
+      <style>          
+	    .modal-backdrop, .modal-backdrop.fade.in {
+	    opacity: 0.3;
+	}
+      </style>
+      {% endblock %}
 {% endblock %}
