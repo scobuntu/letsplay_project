@@ -10,6 +10,8 @@
     <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ STATIC_URL }}css/custom.css" rel="stylesheet">
     {% endblock %}
+    {% block extra-js %}
+    {% endblock %}
 </head>
 
 {% if background %}
@@ -24,7 +26,6 @@
 	<script src="{{ STATIC_URL}}js/jquery.js"></script>
 	<script src="{{ STATIC_URL }}js/main.js"></script>
 	<script src="{{ STATIC_URL }}js/bootstrap.js"></script>
-	<script src="{{ STATIC_URL }}js/audio.js"></script>
 	<script src="{{ STATIC_URL }}js/utils.js"></script>
     {% endblock %}
     {% block extra %}
