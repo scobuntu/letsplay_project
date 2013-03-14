@@ -21,29 +21,36 @@ def customise(request):
 	
 	content = Content.objects.all()
 	avatars = Avatar.objects.all()
+	backgrounds = Background.objects.all()
 
 	if age == '5' or age == '':
 		content = content.all()
 	else:
 		content = content.filter(ageGroup=age)
 	
-	if gender == 'Male' or gender=='Female':
-		content = content.filter(sex=gender)
+	if gender == 'Male':
+		content = content.exclude(sex='Female')
+	elif gender == 'Female':
+		content == content.exclude(sex='Male')
 	else:
 		content = content.all()
 
 	if len(interests) == len(Category.objects.all()) or interests == []:
 		content = content.all()
 	else:
-		content = content.filter(category__pk__in=interests)
-	
+		filtercontent = content.filter(category__pk__in=interests)
+		if filtercontent.count()==0:
+			content = content.all()
+		else:
+			content = filtercontent
+			
 	content_vars = {
 	        'name': name,
 	        'interests' : interests,
 	        'games' : content.filter(content_type='Game'), 
 	        'videos' : content.filter(content_type='Video'),
 	        'avatars' : avatars.all(),
-	        'backgrounds' : Background.objects.all()
+	        'backgrounds' : backgrounds.all()
 	        }
 	return render_to_response('customise.html', content_vars, RequestContext(request))
 
@@ -53,6 +60,7 @@ def play(request):
 	
 	name = request.session['name']
 	avatar = request.POST.get('avatar')
+	background = request.POST.get('background')
 	choice_list = request.POST.getlist('choices')
 	choices = Content.objects.filter(id__in=choice_list)
 
@@ -60,7 +68,8 @@ def play(request):
 		'name' : name,
 		'games' : choices.filter(content_type='Game'),
 		'videos' : choices.filter(content_type='Video'),
-		'avatar' : Avatar.objects.get(pk=avatar)
+		'avatar' : Avatar.objects.get(pk=avatar),
+		'background' : Background.objects.get(pk=background)
 		}
 	
 	return render_to_response('kids_page.html', content_vars, RequestContext(request))

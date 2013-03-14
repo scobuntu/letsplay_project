@@ -2,7 +2,6 @@ html {
 }
 
 #main {
-	background: url(../img/main-bg.jpg) no-repeat center top;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -81,8 +80,17 @@ form label {
 	margin-bottom: 10px;
 }
 
-form input[type="radio"], input[type="checkbox"] {
-	margin: 0 0 0 0;
+.thumbnails  input[type="radio"], .thumbnails input[type="checkbox"] {
+	display: block;
+	float: left;
+	position: relative;
+	top: 7px;
+}
+
+.thumbnails li label {
+	display: block;
+	width: auto;
+	text-align: center;
 }
 
 .modal-header-top {
@@ -176,9 +184,32 @@ form input[type="radio"], input[type="checkbox"] {
  background-clip:padding-box
  }
  
-  .modal-body{
+ .modal-games{
+ position:fixed;
+ top:10%;
+ left:50%;
+ z-index:1050;
+ width:auto;
+ height:600px;
+ margin-left:-280px;
+ background-color:#fff;
+ border:1px solid #999;
+ border:10px solid rgba(228,240,255,0.3);
+ *border:1px solid #999;
+ -webkit-border-radius:35px;
+ -moz-border-radius:35px;
+ border-radius:35px;
+ outline:0;
+ -webkit-box-shadow:0 3px 7px rgba(0,0,0,0.3);
+ -moz-box-shadow:0 3px 7px rgba(0,0,0,0.3);
+ box-shadow:0 3px 7px rgba(0,0,0,0.3);
+ -webkit-background-clip:padding-box;
+ -moz-background-clip:padding-box;
+ background-clip:padding-box
+ }
+ 
+.modal-body{
  position:relative;
- max-height:400px;
  padding:15px;
  overflow-y: hidden;
  overflow-x: hidden
@@ -226,7 +257,7 @@ form input[type="radio"], input[type="checkbox"] {
  -o-transition:all .2s ease-in-out;
  transition:all .2s ease-in-out;
  height: 100px;
- width: 100px
+ width: 100px 
  }
  
   .thumbnail-avatar{
@@ -272,4 +303,19 @@ form input[type="radio"], input[type="checkbox"] {
  -webkit-box-shadow:0 1px 4px rgba(0,105,214,0.25);
  -moz-box-shadow:0 1px 4px rgba(0,105,214,0.25);
  box-shadow:0 1px 4px rgba(0,105,214,0.25)
+ }
+ 
+ #games .thumbnails li input, #background .thumbnails li input, #videos .thumbnails li input{
+	width: 20px;
+	padding: 5px 0 0 0;
+ }
+ 
+ .thumbnails h6 {
+	display: block;
+	float: left;
+	padding: 0 0 0 5px;
+ }
+ 
+ .modal-body {
+	max-height: auto !important;
  }

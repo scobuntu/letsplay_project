@@ -14,7 +14,11 @@
     {% endblock %}
 </head>
 
-<body id="main">
+{% if background %}
+<body style="background: url('/{{ background.screenShot }}')">
+{% else %}
+<body style="background: url('/static/img/main-bg.jpg')">
+{% endif %}
 <div class="navbar navbar-static-top">
   <div class="navbar-inner">
     <a class="brand" href="{% url index %}"><IMG SRC="{{ STATIC_URL}}img/letsplaylogo.png"></a>
