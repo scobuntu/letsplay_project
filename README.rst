@@ -3,14 +3,9 @@ Setup Instructions
 =======================
 
 Run the following to get started. 
-    
-    Create the database
 
-    - python manage.py syncdb
-    
-    Load the sample data provided 
-
-    - python manage.py loaddata content_fixture.json 
+    username: eplayground
+    password: letsplay
 
     Run the server 
 
