@@ -4,16 +4,13 @@
 					</a>
 					<input type="checkbox" value="{{ game.id }}" name="choices" />
 					<h6>{{ game.name }}</h6>
-			<div id="game{{ forloop.counter }}" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="game{{ forloop.counter }}" aria-hidden="true">
+			<div id="game{{ forloop.counter }}" class="modal hide fade modal-games" tabindex="-1" role="dialog" aria-labelledby="game{{ forloop.counter }}" aria-hidden="true">
 			  <div class="modal-header">
 			    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 			    <h3 id="{{ forloop.counter }}">{{ game.name }}</h3>
 			  </div>
 			  <div class="modal-body">
-			    {{ game.embedCode|safe }}>
-			  </div>
-			  <div class="modal-footer">
-			    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+			    {{ game.embedCode|safe }}
 			  </div>
 			</div>
 			</li>

@@ -186,7 +186,7 @@ form label {
  
  .modal-games{
  position:fixed;
- top:10%;
+ top:5% !important;
  left:50%;
  z-index:1050;
  width:auto;
@@ -319,9 +319,13 @@ form label {
  }
  
  .modal-body {
-	max-height: 700px;
+	max-height: 600px;
  }
 
 #form-spacing-left input[type="checkbox"] {
 	margin: -4px 0 0;
+}
+
+#welcomeModal .modal-body {
+	height: 400px;
 }
