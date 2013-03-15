@@ -1,10 +1,4 @@
-// Modal functionality
-$(document).ready(function(){
-    setTimeout(function(){
-	$('#welcomeModal').modal('show');
-	$('#welcomeModal').fadeIn();
-    }, 700);
-    
+
 // Hide input on click
 function hideFormText() {
 	var _inputs = document.getElementsByTagName('input');
@@ -34,7 +28,6 @@ if (window.addEventListener)
 	window.addEventListener("load", hideFormText, false);
 else if (window.attachEvent)
 	window.attachEvent("onload", hideFormText);
-});
 // Form functionality
 $(".checkboxes input:checkbox:first").change(function () {
 $(".checkboxes").find(':checkbox').prop("checked", this.checked);

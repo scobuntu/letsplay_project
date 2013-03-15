@@ -10,10 +10,11 @@
 				<div id="main-avatar" class="pull-left span2">
 					{{ avatar.embedCode|safe }}
 				</div>
-			<hgroup>
-				<h1>Hello {{ name }}!</h1>
-				<h1>What do you want to play today?</h1>
-			</hgroup>
+				<hgroup>
+					<h1>Hello {{ name }}!</h1>
+					<h1>What do you want to play today?</h1>
+				</hgroup>
+			</header>
 		</div>
 		<!-- / row -->
 		<div class="row">
@@ -26,8 +27,8 @@
 							<img src="/{{ game.screenShot }}" alt="" />
 						</a>
 					<h6>{{ game.name }}</h6>
-					</li>
 					{% include "includes/game-modal.html" %}
+					</li>
 				{% endfor %}
 				</ul>
 			</div>
@@ -40,9 +41,9 @@
 							<img src="/{{ video.screenShot }}" alt="" />
 						</a>
 					<h6>{{ video.name }}</h6>
-					</li>
 			{% include "includes/video-modal.html" %}
 				{% endfor %}
+				</li>
 				</ul>
 			</div>
 			<!-- / videos -->

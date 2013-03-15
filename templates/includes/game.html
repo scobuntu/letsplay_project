@@ -1,14 +1,13 @@
 				<li class="span2">
-					<a href="#game{{ forloop.counter }}" role="button" data-toggle="modal"class="thumbnail">
+					<a href="#game{{ forloop.counter }}" role="button" data-toggle="modal" class="thumbnail">
 						<img src="/{{ game.screenShot }}" alt="" />
 					</a>
 					<input type="checkbox" value="{{ game.id }}" name="choices" />
 					<h6>{{ game.name }}</h6>
-				</li>
-			<div id="game{{ forloop.counter }}" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div id="game{{ forloop.counter }}" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="game{{ forloop.counter }}" aria-hidden="true">
 			  <div class="modal-header">
 			    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-			    <h3 id="myModalLabel">{{ game.name }}</h3>
+			    <h3 id="{{ forloop.counter }}">{{ game.name }}</h3>
 			  </div>
 			  <div class="modal-body">
 			    {{ game.embedCode|safe }}>
@@ -17,3 +16,4 @@
 			    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
 			  </div>
 			</div>
+			</li>
