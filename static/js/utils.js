@@ -28,7 +28,3 @@ if (window.addEventListener)
 	window.addEventListener("load", hideFormText, false);
 else if (window.attachEvent)
 	window.attachEvent("onload", hideFormText);
-// Form functionality
-$(".checkboxes input:checkbox:first").change(function () {
-$(".checkboxes").find(':checkbox').prop("checked", this.checked);
-});

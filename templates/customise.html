@@ -8,10 +8,10 @@
 		<h1 id="customise-title">Customise a page for {{ name }}</h1>
 		<input id="create-btn" type="submit" class="btn btn-primary" value="Play">
 		<div class="row">
-			<div class="pull-left span5">
+			<div class="pull-left span5" id="avatars">
 				{% include "includes/avatar.html" %}
 			</div>
-			<div class="pull-right span6">
+			<div class="pull-right span6" id="backgrounds">
 				{% include "includes/background.html" %}
 			</div>
 		</div>
@@ -43,4 +43,5 @@
 {% endblock %}
 {% block extra %}
 <script src="{{ STATIC_URL }}js/utils.js"></script>
+<script src="{{ STATIC_URL }}js/checkboxes.js"></script>
 {% endblock %}
