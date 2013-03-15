@@ -17,6 +17,7 @@
 		</div>
 		<!-- / row -->
 		<div class="row">
+		{% if games %}
 			<div class="pull-left span6">
 				<h3>Select Games</h3>
 				<ul class="thumbnails">
@@ -25,6 +26,8 @@
 				{% endfor %}
 				</ul>
 			</div>
+		{% endif %}
+		{% if videos %}
 			<div class="pull-left span6">
 				<h3>Select Videos</h3>
 				<ul class="thumbnails">
@@ -33,6 +36,7 @@
 				{% endfor %}
 				</ul>
 			</div>
+		{% endif %}
 		</div>
 		<!-- / row -->
 		</form>

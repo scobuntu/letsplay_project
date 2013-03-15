@@ -319,5 +319,5 @@ form label {
  }
  
  .modal-body {
-	max-height: auto !important;
+	max-height: 700px;
  }
