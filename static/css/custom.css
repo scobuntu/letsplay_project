@@ -321,3 +321,7 @@ form label {
  .modal-body {
 	max-height: 700px;
  }
+
+#form-spacing-left input[type="checkbox"] {
+	margin: -4px 0 0;
+}
