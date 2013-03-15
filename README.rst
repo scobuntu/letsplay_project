@@ -9,29 +9,14 @@ Run the following to get started.
 
     Run the server 
 
-    - python manage.py runserver 
+    - python manage.py runserver
 
 =======================
-Django Project Template
+Troubleshooting
 =======================
 
-This is basic Django project template.
+Q. I deleted the database file, how do I get the content back?
 
-Project layout
-==============
+A. Use the content_fixture.json to load the sample data. 
 
-{{ project_name }}/settings/
-    contains project settings for production and development
-
-requirements/
-    contains project requirements for production and deveopment
-
-templates/
-    project wide templates (404 and 500 included)
-
-static/
-    for storing project-wide static files
-
-public/
-    default destination for ``collectstatic``
-
+       > python manage.py loaddata content_fixture.json  
