@@ -1,4 +1,22 @@
 =======================
+Setup Instructions
+=======================
+
+Run the following to get started. 
+    
+    Create the database
+
+    - python manage.py syncdb
+    
+    Load the sample data provided 
+
+    - python manage.py loaddata content_fixture.json 
+
+    Run the server 
+
+    - python manage.py runserver 
+
+=======================
 Django Project Template
 =======================
 
