@@ -1,3 +1,7 @@
+
+https://github.com/scobuntu/letsplay_project
+
+
 =======================
 Setup Instructions
 =======================
